@@ -1,0 +1,501 @@
+Rank,Name,Value,Age,Positions,Team,Level
+1,Bobby Witt Jr.,10000,25.7,SS,KC,MLB
+2,Shohei Ohtani,9807,31.7,"SP, UT",LAD,MLB
+3,Juan Soto,8687,27.4,OF,NYM,MLB
+4,Paul Skenes,8606,23.8,SP,PIT,MLB
+5,Corbin Carroll,6921,25.5,OF,AZ,MLB
+6,Nick Kurtz,6810,22.9,1B,ATH,MLB
+7,Tarik Skubal,6805,29.3,SP,DET,MLB
+8,Junior Caminero,6804,22.7,3B,TB,MLB
+9,Gunnar Henderson,6675,24.7,SS,BAL,MLB
+10,Julio Rodriguez,6398,25.2,OF,SEA,MLB
+11,Elly De La Cruz,6325,24.1,SS,CIN,MLB
+12,Roman Anthony,6171,21.8,OF,BOS,MLB
+13,Ronald Acuna Jr.,6124,28.2,OF,ATL,MLB
+14,Jackson Chourio,6094,21.9,OF,MIL,MLB
+15,Vladimir Guerrero Jr.,5999,26.9,1B,TOR,MLB
+16,Aaron Judge,5912,33.9,OF,NYY,MLB
+17,Garrett Crochet,5562,26.7,SP,BOS,MLB
+18,Fernando Tatis Jr.,5505,27.2,OF,SD,MLB
+19,Konnor Griffin,5461,19.9,SS,PIT,AA
+20,James Wood,5096,23.5,OF,WSH,MLB
+21,Jose Ramirez,4964,33.5,3B,CLE,MLB
+22,Yoshinobu Yamamoto,4809,27.5,SP,LAD,MLB
+23,Cal Raleigh,4627,29.3,C,SEA,MLB
+24,Kyle Tucker,4557,29.1,OF,LAD,MLB
+25,Wyatt Langford,4543,24.3,OF,TEX,MLB
+26,Bryan Woo,4543,26.1,SP,SEA,MLB
+27,Zach Neto,4251,25.1,SS,LAA,MLB
+28,Yordan Alvarez,4238,28.7,OF,HOU,MLB
+29,Hunter Greene,4181,26.6,SP,CIN,MLB
+30,Hunter Brown,4123,27.5,SP,HOU,MLB
+31,Pete Crow-Armstrong,4102,23.9,OF,CHC,MLB
+32,Jackson Merrill,4032,22.9,OF,SD,MLB
+33,Cristopher Sanchez,3767,29.2,SP,PHI,MLB
+34,Kevin McGonigle,3745,21.5,SS,DET,AA
+35,Riley Greene,3710,25.4,OF,DET,MLB
+36,Jazz Chisholm Jr.,3705,28.1,"2B, 3B",NYY,MLB
+37,Logan Gilbert,3627,28.8,SP,SEA,MLB
+38,Rafael Devers,3590,29.4,1B,SF,MLB
+39,Eury Perez,3520,22.9,SP,MIA,MLB
+40,Chase Burns,3506,23.1,SP,CIN,MLB
+41,Francisco Lindor,3421,32.3,SS,NYM,MLB
+42,JJ Wetherholt,3419,23.5,"2B, SS",STL,AAA
+43,Logan Webb,3379,29.3,SP,SF,MLB
+44,Jacob Misiorowski,3325,23.9,SP,MIL,MLB
+45,Ketel Marte,3315,32.4,2B,AZ,MLB
+46,George Kirby,3243,28.1,SP,SEA,MLB
+47,Cole Ragans,3168,28.2,SP,KC,MLB
+48,Pete Alonso,3090,31.2,1B,BAL,MLB
+49,Nolan McLean,3001,24.6,SP,NYM,MLB
+50,Austin Riley,2974,28.9,3B,ATL,MLB
+51,Jesus Made,2972,18.8,SS,MIL,AA
+52,Samuel Basallo,2955,21.6,C,BAL,MLB
+53,Kyle Schwarber,2941,32.9,UT,PHI,MLB
+54,Jackson Holliday,2882,22.2,2B,BAL,MLB
+55,Leo De Vries,2848,19.4,SS,ATH,AA
+56,CJ Abrams,2836,25.4,SS,WSH,MLB
+57,Bo Bichette,2796,27.9,SS,NYM,MLB
+58,Jac Caglianone,2784,23.1,"1B, OF",KC,MLB
+59,Maikel Garcia,2749,26,"2B, 3B, SS",KC,MLB
+60,Joe Ryan,2718,29.7,SP,MIN,MLB
+61,Freddy Peralta,2712,29.7,SP,MIL,MLB
+62,Max Fried,2709,32.1,SP,NYY,MLB
+63,Trey Yesavage,2698,22.6,SP,TOR,MLB
+64,Bryce Harper,2660,33.4,1B,PHI,MLB
+65,Tyler Soderstrom,2644,24.3,"1B, OF",ATH,MLB
+66,Bubba Chandler,2631,23.5,SP,PIT,MLB
+67,Ben Rice,2605,27,"C, 1B",NYY,MLB
+68,Spencer Schwellenbach,2572,25.8,SP,ATL,MLB
+69,Matt Olson,2560,31.9,1B,ATL,MLB
+70,Trea Turner,2560,32.7,SS,PHI,MLB
+71,Geraldo Perdomo,2552,26.4,SS,AZ,MLB
+72,Max Clark,2547,21.2,OF,DET,AA
+73,William Contreras,2472,28.2,C,MIL,MLB
+74,Sebastian Walcott,2455,19.9,SS,TEX,AA
+75,Corey Seager,2449,31.8,SS,TEX,MLB
+76,Mason Miller,2448,27.5,RP,SD,MLB
+77,Cam Schlittler,2402,25.1,SP,NYY,MLB
+78,Mookie Betts,2324,33.4,SS,LAD,MLB
+79,Walker Jenkins,2277,21,OF,MIN,AAA
+80,Spencer Strider,2270,27.3,SP,ATL,MLB
+81,Josh Naylor,2216,28.7,1B,SEA,MLB
+82,Jacob Wilson,2215,23.9,SS,ATH,MLB
+83,Oneil Cruz,2205,27.4,OF,PIT,MLB
+84,Vinnie Pasquantino,2184,28.4,1B,KC,MLB
+85,Dylan Crews,2136,24,OF,WSH,MLB
+86,Jarren Duran,2108,29.5,OF,BOS,MLB
+87,Kade Anderson,2103,21.7,SP,SEA,ROK
+88,Brent Rooker,2068,31.3,"OF, UT",ATH,MLB
+89,Jesus Luzardo,2041,28.4,SP,PHI,MLB
+90,Dylan Cease,2003,30.2,SP,TOR,MLB
+91,Manny Machado,1974,33.7,3B,SD,MLB
+92,Drake Baldwin,1959,24.9,C,ATL,MLB
+93,MacKenzie Gore,1959,27,SP,TEX,MLB
+94,Roki Sasaki,1955,24.3,SP,LAD,MLB
+95,Jeremy Pena,1940,28.4,SS,HOU,MLB
+96,Carter Jensen,1924,22.7,C,KC,MLB
+97,Brice Turang,1897,26.3,2B,MIL,MLB
+98,Michael Busch,1884,28.3,1B,CHC,MLB
+99,Framber Valdez,1858,32.3,SP,DET,MLB
+100,Bryce Eldridge,1842,21.4,UT,SF,MLB
+101,Jordan Westburg,1841,27,"2B, 3B",BAL,MLB
+102,Gavin Williams,1814,26.6,SP,CLE,MLB
+103,Travis Bazzana,1788,23.5,2B,CLE,AAA
+104,Josue De Paula,1776,20.8,OF,LAD,AA
+105,Lawrence Butler,1770,25.6,OF,ATH,MLB
+106,Luke Keaschall,1759,23.5,2B,MIN,MLB
+107,Edward Florentino,1750,19.3,OF,PIT,A
+108,Kyle Stowers,1732,28.2,OF,MIA,MLB
+109,Luis Pena,1731,19.3,"2B, SS",MIL,A+
+110,Michael King,1699,30.8,SP,SD,MLB
+111,Alex Bregman,1699,31.9,3B,CHC,MLB
+112,2026 Early 1st,1694,,,,
+113,Andrew Painter,1691,22.9,SP,PHI,MLB
+114,Colt Emerson,1648,20.6,SS,SEA,AAA
+115,Cody Bellinger,1642,30.6,OF,NYY,MLB
+116,Aidan Miller,1640,21.7,SS,PHI,AAA
+117,Cade Horton,1638,24.5,SP,CHC,MLB
+118,Thomas White,1617,21.4,SP,MIA,AAA
+119,Emmet Sheehan,1595,26.3,SP,LAD,MLB
+120,Jared Jones,1588,24.6,SP,PIT,MLB
+121,Sal Stewart,1549,22.2,1B,CIN,MLB
+122,Agustin Ramirez,1536,24.5,C,MIA,MLB
+123,Nick Lodolo,1536,28.1,SP,CIN,MLB
+124,Shea Langeliers,1536,28.3,C,ATH,MLB
+125,Michael Harris II,1530,24.9,OF,ATL,MLB
+126,Seiya Suzuki,1499,31.5,"OF, UT",CHC,MLB
+127,Marcelo Mayer,1492,23.2,3B,BOS,MLB
+128,Kristian Campbell,1489,23.7,2B,BOS,MLB
+129,Blake Snell,1455,33.2,SP,LAD,MLB
+130,Zyhir Hope,1418,21.1,OF,LAD,AA
+131,Pablo Lopez,1397,29.9,SP,MIN,AAA
+132,Will Smith,1390,30.9,C,LAD,MLB
+133,Spencer Torkelson,1387,26.5,1B,DET,MLB
+134,Byron Buxton,1375,32.2,OF,MIN,MLB
+135,Tyler Glasnow,1366,32.5,SP,LAD,MLB
+136,Edward Cabrera,1364,27.9,SP,CHC,MLB
+137,Corbin Burnes,1363,31.4,SP,AZ,MLB
+138,Andres Munoz,1357,27.1,RP,SEA,MLB
+139,Kyle Bradish,1357,29.5,SP,BAL,MLB
+140,Matt Shaw,1351,24.3,3B,CHC,MLB
+141,Jackson Jobe,1340,23.6,SP,DET,MLB
+142,Jonah Tong,1331,22.7,SP,NYM,MLB
+143,2027 Early 1st,1319,,,,
+144,Carson Benge,1316,23.1,OF,NYM,AAA
+145,Cam Smith,1300,23,OF,HOU,MLB
+146,Tatsuya Imai,1270,27.8,SP,HOU,MLB
+147,Freddie Freeman,1266,36.5,1B,LAD,MLB
+148,Jasson Dominguez,1264,23.1,OF,NYY,MLB
+149,Colson Montgomery,1263,24,"3B, SS",CWS,MLB
+150,Adley Rutschman,1262,28.1,C,BAL,MLB
+151,Bryce Rainer,1254,20.7,SS,DET,A
+152,Ranger Suarez,1226,30.5,SP,BOS,MLB
+153,Connelly Early,1219,23.9,SP,BOS,MLB
+154,Kris Bubic,1213,28.5,SP,KC,MLB
+155,Ivan Herrera,1206,25.8,C,STL,MLB
+156,Shane Baz,1198,26.7,SP,BAL,MLB
+157,Nico Hoerner,1196,28.8,2B,CHC,MLB
+158,Addison Barger,1193,26.3,"3B, OF",TOR,MLB
+159,Eli Willits,1189,18.2,SS,WSH,A
+160,Jhoan Duran,1182,28.1,RP,PHI,MLB
+161,Hunter Goodman,1177,26.4,C,COL,MLB
+162,Zack Wheeler,1170,35.8,SP,PHI,MLB
+163,Shane McClanahan,1170,28.8,SP,TB,MLB
+164,Payton Tolle,1168,23.3,SP,BOS,MLB
+165,Chris Sale,1163,36.9,SP,ATL,MLB
+166,Andy Pages,1158,25.2,OF,LAD,MLB
+167,Jordan Lawlar,1151,23.6,3B,AZ,MLB
+168,Isaac Paredes,1139,27,3B,HOU,MLB
+169,Noelvi Marte,1111,24.4,"3B, OF",CIN,MLB
+170,Bryce Miller,1076,27.5,SP,SEA,MLB
+171,Liam Doyle,1062,21.7,SP,STL,AA
+172,Steven Kwan,1059,28.5,OF,CLE,MLB
+173,Joshua Baez,1058,22.7,OF,STL,MLB
+174,Randy Arozarena,1056,31,OF,SEA,MLB
+175,Andrew Abbott,1054,26.8,SP,CIN,MLB
+176,Wilyer Abreu,1054,26.7,OF,BOS,MLB
+177,Ethan Holliday,1051,19,SS,COL,A
+178,Edwin Diaz,1047,31.9,RP,LAD,MLB
+179,Ryan Pepiot,1045,28.5,SP,TB,MLB
+180,Luis Robert Jr.,1043,28.6,OF,NYM,MLB
+181,Jacob deGrom,1042,37.7,SP,TEX,MLB
+182,Robby Snelling,1033,22.2,SP,MIA,AAA
+183,Jonathan Aranda,1019,27.8,1B,TB,MLB
+184,Munetaka Murakami,1012,26.1,3B,CWS,MLB
+185,Willy Adames,1010,30.5,SS,SF,MLB
+186,Seth Hernandez,985,19.7,SP,PIT,ROK
+187,Tanner Bibee,982,26.9,SP,CLE,MLB
+188,Eduardo Quintero,979,20.5,OF,LAD,A+
+189,Owen Caissie,969,23.7,OF,MIA,MLB
+190,Chase DeLauter,967,24.4,OF,CLE,MLB
+191,Ozzie Albies,964,29.2,2B,ATL,MLB
+192,Shane Bieber,963,30.8,SP,TOR,MLB
+193,Ceddanne Rafaela,960,25.5,"2B, OF",BOS,MLB
+194,Jo Adell,956,26.9,OF,LAA,MLB
+195,Rainiel Rodriguez,954,19.2,C,STL,A+
+196,Shota Imanaga,940,32.5,SP,CHC,MLB
+197,Jakob Marsee,938,24.7,OF,MIA,MLB
+198,2026 Mid 1st,923,,,,
+199,Ryan Waldschmidt,921,23.4,OF,AZ,AA
+200,Josh Hader,912,31.9,RP,HOU,MLB
+201,Logan Henderson,908,24,SP,MIL,MLB
+202,Heliot Ramos,904,26.5,OF,SF,MLB
+203,Ryan Sloan,897,20.1,SP,SEA,A+
+204,Cade Smith,897,26.8,RP,CLE,MLB
+205,Gerrit Cole,896,35.5,SP,NYY,MLB
+206,Justin Crawford,891,22.1,OF,PHI,AAA
+207,Dax Kilby,890,19.3,SS,NYY,A
+208,Dylan Beavers,883,24.6,OF,BAL,MLB
+209,Moises Ballesteros,882,22.3,UT,CHC,MLB
+210,Carlos Rodon,875,33.2,SP,NYY,MLB
+211,Kyle Teel,875,24,C,CWS,MLB
+212,Sandy Alcantara,867,30.5,SP,MIA,MLB
+213,Mike Trout,864,34.6,"OF, UT",LAA,MLB
+214,Trevor Rogers,858,28.3,SP,BAL,MLB
+215,Christian Yelich,855,34.2,"OF, UT",MIL,MLB
+216,Hurston Waldrep,839,24,SP,ATL,MLB
+217,Josue Briceno,832,21.4,"C, 1B",DET,AA
+218,Noah Schultz,830,22.6,SP,CWS,AAA
+219,Francisco Alvarez,826,24.3,C,NYM,MLB
+220,Braden Montgomery,824,22.9,OF,CWS,AA
+221,Matt McLain,824,26.6,2B,CIN,MLB
+222,Kazuma Okamoto,822,29.7,"1B, 3B",TOR,MLB
+223,Gage Jump,821,22.9,SP,ATH,AA
+224,Charlie Condon,818,22.9,1B,COL,AA
+225,Grayson Rodriguez,818,26.3,SP,LAA,MLB
+226,Ralphy Velazquez,815,20.8,1B,CLE,AA
+227,Travis Sykora,813,21.8,SP,WSH,AA
+228,Jett Williams,812,22.3,"2B, SS, OF",NYM,AAA
+229,Josuar Gonzalez,809,18.4,SS,SF,ROK
+230,Masyn Winn,805,23.9,SS,STL,MLB
+231,Emmanuel Rodriguez,804,23,OF,MIN,MLB
+232,Jarlin Susana,804,21.9,SP,WSH,AA
+233,Evan Carter,804,23.5,OF,TEX,MLB
+234,Kerry Carpenter,801,28.5,OF,DET,MLB
+235,Noah Cameron,796,26.6,SP,KC,MLB
+236,JoJo Parker,795,19.6,SS,TOR,ROK
+237,Lazaro Montes,794,21.4,OF,SEA,AA
+238,Royce Lewis,793,26.7,3B,MIN,MLB
+239,Brandon Woodruff,788,33.1,SP,MIL,MLB
+240,2027 Mid 1st,773,,,,
+241,Kyle Manzardo,772,25.6,1B,CLE,MLB
+242,Jamie Arnold,765,21.9,SP,ATH,ROK
+243,Ezequiel Tovar,763,24.6,SS,COL,MLB
+244,Zebby Matthews,762,25.8,SP,MIN,MLB
+245,Ryan Weathers,761,26.2,SP,NYY,MLB
+246,2026 Late 1st,748,,,,
+247,Luis Castillo,743,33.2,SP,SEA,MLB
+248,George Lombard Jr.,741,20.8,SS,NYY,AA
+249,Jack Leiter,739,25.9,SP,TEX,MLB
+250,Yainer Diaz,734,27.4,C,HOU,MLB
+251,Hagen Smith,733,22.5,SP,CWS,AA
+252,Carson Williams,729,22.7,SS,TB,MLB
+253,Quinn Priester,728,25.5,SP,MIL,MLB
+254,Brayan Bello,727,26.8,SP,BOS,MLB
+255,Daylen Lile,725,23.3,OF,WSH,MLB
+256,Zac Gallen,720,30.6,SP,AZ,MLB
+257,2027 Late 1st,715,,,,
+258,Drew Rasmussen,705,30.6,SP,TB,MLB
+259,Justin Steele,703,30.6,SP,CHC,MLB
+260,Brendan Donovan,703,29.1,"2B, OF",SEA,MLB
+261,Brenton Doyle,703,27.8,OF,COL,MLB
+262,Nick Pivetta,700,33,SP,SD,MLB
+263,Luis Gil,696,27.7,SP,NYY,MLB
+264,Parker Messick,691,25.4,SP,CLE,MLB
+265,Colton Cowser,686,25.9,OF,BAL,MLB
+266,Sal Frelick,680,25.9,OF,MIL,MLB
+267,Coby Mayo,680,24.2,1B,BAL,MLB
+268,Alec Burleson,679,27.3,"1B, OF",STL,MLB
+269,Daulton Varsho,677,29.7,OF,TOR,MLB
+270,Eugenio Suarez,670,34.6,3B,CIN,MLB
+271,Dalton Rushing,668,25,C,LAD,MLB
+272,Emil Morales,665,19.4,SS,LAD,A
+273,Cam Caminiti,664,19.6,SP,ATL,A
+274,Kevin Gausman,662,35.2,SP,TOR,MLB
+275,Alfredo Duno,655,20.2,C,CIN,A
+276,Colt Keith,649,24.6,"1B, 2B, 3B",DET,MLB
+277,Caleb Bonemer,648,20.4,"3B, SS",CWS,A+
+278,AJ Smith-Shawver,646,23.3,SP,ATL,MLB
+279,Christian Moore,646,23.4,2B,LAA,MLB
+280,Brandon Sproat,640,25.5,SP,MIL,MLB
+281,Brandon Lowe,638,31.7,2B,TB,MLB
+282,Devin Williams,636,31.4,RP,NYM,MLB
+283,Mike Sirota,634,22.7,OF,LAD,A+
+284,Troy Melton,631,25.2,"SP, RP",DET,MLB
+285,Taylor Ward,629,32.2,OF,BAL,MLB
+286,Kaelen Culpepper,628,23.2,SS,MIN,AA
+287,Xavier Edwards,626,26.6,"2B, SS",MIA,MLB
+288,Ian Happ,622,31.6,OF,CHC,MLB
+289,Carlos Lagrange,621,22.8,SP,NYY,AA
+290,Jaxon Wiggins,621,24.4,SP,CHC,AAA
+291,Ethan Conrad,619,21.7,OF,CHC,ROK
+292,Kyson Witherspoon,616,21.6,SP,BOS,ROK
+293,Theo Gillen,613,20.5,OF,TB,A
+294,Nathan Eovaldi,613,36,SP,TEX,MLB
+295,Luis Morales,610,23.4,SP,ATH,MLB
+296,Matt Chapman,610,32.8,3B,SF,MLB
+297,Michael Arroyo,608,21.3,2B,SEA,AA
+298,Gleyber Torres,607,29.2,2B,DET,MLB
+299,Mark Vientos,599,26.2,3B,NYM,MLB
+300,Casey Mize,595,28.8,SP,DET,MLB
+301,Reese Olson,591,26.6,SP,DET,AAA
+302,Willson Contreras,589,33.8,1B,BOS,MLB
+303,Elmer Rodriguez-Cruz,584,22.5,SP,NYY,MLB
+304,Andrew Vaughn,580,27.9,1B,MIL,MLB
+305,Aaron Nola,577,32.7,SP,PHI,MLB
+306,Jacob Reimer,575,22,3B,NYM,AA
+307,Spencer Jones,573,24.8,OF,NYY,MLB
+308,Anthony Volpe,568,24.8,SS,NYY,MLB
+309,Teoscar Hernandez,566,33.4,OF,LAD,MLB
+310,Cole Young,564,22.6,2B,SEA,MLB
+311,Rhett Lowder,556,23.9,SP,CIN,MLB
+312,Spencer Steer,553,28.2,"1B, OF",CIN,MLB
+313,Caleb Durbin,552,26,"2B, 3B",BOS,MLB
+314,Chandler Simpson,547,25.3,OF,TB,MLB
+315,Dansby Swanson,545,32.1,SS,CHC,MLB
+316,Gage Wood,543,22.2,SP,PHI,A
+317,Aiva Arquette,542,22.4,SS,MIA,A+
+318,Bryan Reynolds,535,31.1,OF,PIT,MLB
+319,Triston Casas,530,26.1,1B,BOS,MLB
+320,Shane Smith,526,25.9,SP,CWS,MLB
+321,Joe Boyle,523,26.6,SP,TB,MLB
+322,Tyler Bremner,522,21.9,SP,LAA,ROK
+323,Steele Hall,517,18.6,SS,CIN,ROK
+324,Alejandro Kirk,517,27.3,C,TOR,MLB
+325,Max Meyer,513,26.9,SP,MIA,MLB
+326,Braxton Ashcraft,513,26.4,"SP, RP",PIT,MLB
+327,Abner Uribe,510,25.7,RP,MIL,MLB
+328,Jordan Beck,509,24.9,OF,COL,MLB
+329,Jung Hoo Lee,507,27.5,OF,SF,MLB
+330,Robbie Ray,507,34.4,SP,SF,MLB
+331,Jose Altuve,505,35.8,"2B, OF",HOU,MLB
+332,Will Warren,502,26.7,SP,NYY,MLB
+333,Caden Scarborough,499,20.9,SP,TEX,A+
+334,Jack Flaherty,499,30.4,SP,DET,MLB
+335,Bryson Stott,499,28.4,"2B, SS",PHI,MLB
+336,Esmerlyn Valdez,498,22.1,OF,PIT,MLB
+337,Franklin Arias,498,20.3,SS,BOS,AA
+338,Jonny Farmelo,488,21.5,OF,SEA,A+
+339,George Springer,480,36.5,OF,TOR,MLB
+340,Juan Sanchez,474,18.4,"3B, SS",TOR,ROK
+341,Gabriel Moreno,468,26,C,AZ,MLB
+342,Arjun Nimmala,465,20.4,SS,TOR,A+
+343,Grant Taylor,465,23.8,"SP, RP",CWS,MLB
+344,Ryan Clifford,462,22.6,"1B, OF",NYM,AAA
+345,Chase Dollander,460,24.4,SP,COL,MLB
+346,Taj Bradley,459,24.9,SP,MIN,MLB
+347,Kodai Senga,458,33.1,SP,NYM,MLB
+348,Mitch Keller,449,29.9,SP,PIT,MLB
+349,Mick Abel,446,24.5,SP,MIN,MLB
+350,Slade Caldwell,445,19.7,OF,AZ,A+
+351,Otto Lopez,439,27.4,"2B, SS",MIA,MLB
+352,Daniel Palencia,437,26.1,RP,CHC,MLB
+353,Jhostynxon Garcia,437,23.2,OF,PIT,MLB
+354,Sonny Gray,428,36.3,SP,BOS,MLB
+355,Brett Baty,427,26.3,"2B, 3B",NYM,MLB
+356,Edgar Quero,424,22.9,C,CWS,MLB
+357,Harry Ford,423,23,C,WSH,MLB
+358,Luis Garcia Jr.,423,25.8,2B,WSH,MLB
+359,Brandon Nimmo,419,32.9,OF,TEX,MLB
+360,Cooper Pratt,417,21.5,SS,MIL,AA
+361,Jacob Melton,414,25.5,OF,TB,MLB
+362,Trent Grisham,414,29.3,OF,NYY,MLB
+363,Trevor Megill,411,32.2,RP,MIL,MLB
+364,Luisangel Acuna,407,23.9,2B,CWS,MLB
+365,Trevor Story,404,33.3,SS,BOS,MLB
+366,Yandy Diaz,403,34.6,1B,TB,MLB
+367,Nolan Schanuel,402,24,1B,LAA,MLB
+368,Jose Soriano,400,27.4,SP,LAA,MLB
+369,Ryne Nelson,400,28.1,"SP, RP",AZ,MLB
+370,2026 Early 2nd,397,,,,
+371,Chase Meidroth,397,24.6,"2B, SS",CWS,MLB
+372,Carlos Correa,397,31.4,"3B, SS",HOU,MLB
+373,Alec Bohm,395,29.6,"1B, 3B",PHI,MLB
+374,Nate George,394,19.7,OF,BAL,A+
+375,Brady House,392,22.7,3B,WSH,MLB
+376,Cam Collier,391,21.3,"1B, 3B",CIN,AA
+377,Xavier Isaac,384,22.2,UT,TB,AA
+378,Jack Perkins,383,26.2,"SP, RP",ATH,MLB
+379,Jacob Lopez,382,27.9,SP,ATH,MLB
+380,Cristian Javier,380,28.9,SP,HOU,MLB
+381,Felnin Celesten,379,20.5,SS,SEA,A+
+382,Logan O'Hoppe,375,26.1,C,LAA,MLB
+383,Jordan Walker,372,23.8,OF,STL,MLB
+384,Brooks Lee,371,25,"2B, 3B, SS",MIN,MLB
+385,Zac Veen,368,24.2,OF,COL,MLB
+386,Reid Detmers,367,26.7,RP,LAA,MLB
+387,Kyle Harrison,367,24.6,SP,MIL,MLB
+388,Austin Wells,367,26.6,C,NYY,MLB
+389,Andrew Fischer,367,21.8,3B,MIL,A+
+390,Jackson Ferris,367,22.1,SP,LAD,AA
+391,Clarke Schmidt,365,30,SP,NYY,AA
+392,Quinn Mathews,364,25.4,SP,STL,AAA
+393,Jaison Chourio,363,20.8,OF,CLE,A+
+394,Jurrangelo Cijntje,362,22.8,SP,STL,AA
+395,Kayson Cunningham,361,19.7,SS,AZ,A
+396,Mike Burrows,359,26.3,SP,HOU,MLB
+397,Brice Matthews,357,23.9,2B,HOU,MLB
+398,Ryan Helsley,353,31.6,RP,BAL,MLB
+399,Spencer Arrighetti,352,26.2,SP,HOU,MLB
+400,Luis Arraez,351,28.9,"1B, 2B",SF,MLB
+401,C.J. Kayfus,348,24.3,"1B, OF",CLE,MLB
+402,J.R. Ritchie,348,22.7,SP,ATL,AAA
+403,Bailey Ober,348,30.6,SP,MIN,MLB
+404,Brody Hopkins,345,24.1,SP,TB,AA
+405,Josh Lowe,343,28.1,OF,LAA,MLB
+406,Bryan Abreu,343,28.9,RP,HOU,MLB
+407,Aidan Smith,342,21.6,OF,TB,A+
+408,Kevin Alcantara,340,23.6,OF,CHC,MLB
+409,Kruz Schoolcraft,339,18.9,SP,SD,A
+410,Eduardo Tait,339,19.5,C,MIN,A+
+411,Brandon Pfaadt,339,27.4,SP,AZ,MLB
+412,Kumar Rocker,338,26.3,SP,TEX,MLB
+413,2027 Early 2nd,338,,,,
+414,Hunter Barco,324,25.2,RP,PIT,MLB
+415,Brady Singer,319,29.6,SP,CIN,MLB
+416,Gavin Fien,318,18.9,"3B, SS",WSH,A
+417,Ricky Tiedemann,315,23.5,SP,TOR,MLB
+418,Christian Scott,312,26.7,SP,NYM,MLB
+419,David Bednar,311,31.4,RP,NYY,MLB
+420,Braylon Payne,311,19.6,OF,MIL,A
+421,Salvador Perez,310,35.8,"C, 1B",KC,MLB
+422,Colby Thomas,310,25.1,OF,ATH,MLB
+423,Joe Musgrove,310,33.2,SP,SD,MLB
+424,Josh Jung,310,28.1,3B,TEX,MLB
+425,Jeferson Quero,308,23.4,C,MIL,MLB
+426,Matthew Liberatore,308,26.3,SP,STL,MLB
+427,Griffin Jax,306,31.3,"SP, RP",TB,MLB
+428,Lars Nootbaar,305,28.5,OF,STL,MLB
+429,Robert Suarez,305,35,RP,ATL,MLB
+430,2027 Mid 2nd,305,,,,
+431,Jurickson Profar,303,33,OF,ATL,MLB
+432,Connor Norby,300,25.7,3B,MIA,MLB
+433,Jorge Polanco,300,32.7,2B,NYM,MLB
+434,Angel Genao,300,21.8,"3B, SS",CLE,MLB
+435,Noble Meyer,298,21.1,SP,MIA,A+
+436,Ramon Laureano,296,31.6,OF,SD,MLB
+437,Billy Carlson,295,19.6,SS,CWS,ROK
+438,2027 Late 2nd,295,,,,
+439,Ian Seymour,293,27.2,"SP, RP",TB,MLB
+440,Johnny King,293,19.6,SP,TOR,A
+441,Randy Rodriguez,292,26.5,RP,SF,MLB
+442,Tommy Troy,290,24.1,"2B, OF",AZ,AAA
+443,Pete Fairbanks,290,32.2,RP,MIA,MLB
+444,Xavier Neyens,290,19.3,3B,HOU,ROK
+445,Michael Forret,289,21.9,SP,TB,AA
+446,Joe Mack,289,23.2,C,MIA,MLB
+447,Luis Hernandez,288,17.2,SS,SF,ROK
+448,Miguel Vargas,285,26.3,"1B, 3B",CWS,MLB
+449,Termarr Johnson,285,21.7,2B,PIT,AA
+450,Aroon Escobar,284,21.2,2B,PHI,AA
+451,Deyvison De Los Santos,284,22.7,3B,MIA,MLB
+452,2026 Mid 2nd,283,,,,
+453,Ethan Salas,283,19.8,C,SD,AA
+454,Aroldis Chapman,278,38,RP,BOS,MLB
+455,David Festa,277,25.9,SP,MIN,MLB
+456,Kendry Chourio,275,18.4,SP,KC,A
+457,Justin Martinez,275,24.6,RP,AZ,AAA
+458,Owen Murphy,275,22.4,SP,ATL,A+
+459,A.J. Ewing,274,21.6,OF,NYM,AA
+460,Brock Wilken,274,23.7,3B,MIL,AA
+461,TJ Friedl,273,30.6,OF,CIN,MLB
+462,Andres Gimenez,272,27.5,"2B, SS",TOR,MLB
+463,Adrian Morejon,272,27,RP,SD,MLB
+464,Zack Gelof,272,26.4,2B,ATH,MLB
+465,Xander Bogaerts,261,33.4,SS,SD,MLB
+466,George Klassen,261,24.1,SP,LAA,AAA
+467,Tommy White,260,23,3B,ATH,AA
+468,Kash Mayfield,258,21.1,SP,SD,A
+469,Cade Cavalli,257,27.6,SP,WSH,MLB
+470,Ike Irish,257,22.3,"C, 1B",BAL,A
+471,Khal Stephen,256,23.2,SP,CLE,AA
+472,Joey Cantillo,256,26.2,"SP, RP",CLE,MLB
+473,Hayden Birdsong,255,24.5,"SP, RP",SF,MLB
+474,Orion Kerkering,255,24.9,RP,PHI,MLB
+475,Jace LaViolette,254,22.2,OF,CLE,ROK
+476,Alex Freeland,254,24.5,"2B, 3B",LAD,MLB
+477,Merrill Kelly,252,37.4,SP,AZ,MLB
+478,Drew Gilbert,251,25.4,OF,SF,MLB
+479,Jeremiah Estrada,251,27.3,RP,SD,MLB
+480,Tommy Edman,250,30.8,"2B, 3B, OF",LAD,MLB
+481,Chase Petty,250,22.9,SP,CIN,MLB
+482,Clay Holmes,249,32.9,SP,NYM,MLB
+483,Ben Hess,248,23.5,SP,NYY,AA
+484,Slade Cecconi,245,26.7,SP,CLE,MLB
+485,Ryan O'Hearn,245,32.6,"1B, OF",PIT,MLB
+486,James Tibbs III,244,23.4,OF,LAD,AA
+487,Adael Amador,242,22.9,2B,COL,MLB
+488,Parker Meadows,242,26.3,OF,DET,MLB
+489,Blake Mitchell,239,21.6,C,KC,A+
+490,Ronny Mauricio,237,24.9,3B,NYM,MLB
+491,Dillon Dingler,236,27.5,C,DET,MLB
+492,Landen Roupp,234,27.5,SP,SF,MLB
+493,Marcus Semien,233,35.5,2B,NYM,MLB
+494,Max Muncy,232,23.5,"2B, 3B",ATH,MLB
+495,Jeff Hoffman,232,33.1,RP,TOR,MLB
+496,Edwin Arroyo,231,22.5,SS,CIN,MLB
+497,Adolis Garcia,231,33,OF,PHI,MLB
+498,Carson Whisenhunt,229,25.4,SP,SF,MLB
+499,Tink Hence,227,23.6,SP,STL,MLB
+500,Garrett Mitchell,225,27.5,OF,MIL,MLB
