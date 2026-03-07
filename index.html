@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aggregate Dynasty Rankings</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.bootstrap5.min.css" rel="stylesheet">
+  <style>
+    body { background: #f4f6f9; }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a2332 0%, #2d4a6b 100%);
+      color: white;
+      padding: 1.25rem 0;
+      margin-bottom: 1.5rem;
+    }
+    header p { color: rgba(255,255,255,0.65); font-size: 0.875rem; margin: 0.2rem 0 0; }
+
+    /* ── Tabs ── */
+    .nav-tabs {
+      border-bottom: 2px solid #dee2e6;
+      gap: 2px;
+    }
+    .nav-tabs .nav-link {
+      border: none;
+      border-bottom: 3px solid transparent;
+      border-radius: 4px 4px 0 0;
+      margin-bottom: -2px;
+      padding: 0.6rem 1.1rem;
+      color: #6c757d;
+      font-weight: 500;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+    }
+    .nav-tabs .nav-link:hover:not(.active) {
+      background: rgba(0,0,0,0.04);
+      color: #343a40;
+      border-color: transparent;
+    }
+    .nav-tabs .nav-link.active {
+      background: white;
+      font-weight: 700;
+    }
+
+    /* Sport-specific active tab underline */
+    [data-sport="baseball"].active       { border-bottom-color: #2e86c1; color: #1a5276; }
+    [data-sport="football"].active       { border-bottom-color: #1e8449; color: #145a32; }
+    [data-sport="basketball"].active     { border-bottom-color: #ca6f1e; color: #784212; }
+    [data-sport="hockey-skaters"].active,
+    [data-sport="hockey-goalies"].active { border-bottom-color: #7d3c98; color: #5b2c8d; }
+
+    /* ── Table wrapper card ── */
+    .loading-placeholder {
+      text-align: center;
+      padding: 60px 20px;
+      color: #6c757d;
+    }
+    .dataTables_wrapper {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem 1.25rem 1.25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    /* ── Table ── */
+    table.dataTable { font-size: 0.875rem; }
+    table.dataTable td, table.dataTable th { padding: 0.45rem 0.7rem; }
+
+    /* Player name */
+    table.dataTable td.col-player { font-weight: 600; min-width: 150px; white-space: nowrap; }
+
+    /* Position badge */
+    .pos-badge {
+      display: inline-block;
+      padding: 0.15em 0.55em;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    /* Average Rank column — sport-specific background */
+    table.dataTable td.col-avg-rank { font-weight: 700; text-align: center; }
+
+    /* Baseball — light blue */
+    #baseball-table       td.col-avg-rank { background-color: #d6eaf8 !important; color: #1a5276; }
+    #baseball-table       th.col-avg-rank { background-color: #aed6f1 !important; }
+    /* Football — light green */
+    #football-table       td.col-avg-rank { background-color: #d5f5e3 !important; color: #145a32; }
+    #football-table       th.col-avg-rank { background-color: #a9dfbf !important; }
+    /* Basketball — light orange */
+    #basketball-table     td.col-avg-rank { background-color: #fdebd0 !important; color: #784212; }
+    #basketball-table     th.col-avg-rank { background-color: #fad7a0 !important; }
+    /* Hockey — light purple */
+    #hockey-skaters-table td.col-avg-rank,
+    #hockey-goalies-table td.col-avg-rank { background-color: #e8daef !important; color: #5b2c8d; }
+    #hockey-skaters-table th.col-avg-rank,
+    #hockey-goalies-table th.col-avg-rank { background-color: #d2b4de !important; }
+
+    /* Source columns */
+    table.dataTable td.col-source { text-align: center; color: #333; }
+
+    /* Rank Variance — color coded by agreement level */
+    table.dataTable td.col-variance { text-align: center; }
+    .var-low  { color: #15803d; font-weight: 600; }  /* good agreement  */
+    .var-mid  { color: #b45309; }                    /* some disagreement */
+    .var-high { color: #b91c1c; }                    /* high disagreement */
+
+    /* Source header abbreviation tooltip hint */
+    th .src-hdr { cursor: help; border-bottom: 1px dashed #aaa; }
+
+    /* FixedColumns left border separator */
+    table.dataTable.fixedColumns-left { border-right: 2px solid #dee2e6; }
+
+    footer { color: #888; font-size: 0.8rem; padding: 2rem 0; text-align: center; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container-fluid px-4">
+    <h1 class="h3 fw-bold mb-0">Aggregate Dynasty Rankings</h1>
+    <p>Combined rankings from multiple sources &mdash; Baseball &middot; Football &middot; Basketball &middot; Hockey</p>
+  </div>
+</header>
+
+<div class="container-fluid px-4">
+
+  <ul class="nav nav-tabs mb-3" id="sportTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" data-sport="baseball" data-bs-toggle="tab" data-bs-target="#tab-baseball" type="button" role="tab">Baseball</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-sport="football" data-bs-toggle="tab" data-bs-target="#tab-football" type="button" role="tab">Football</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-sport="basketball" data-bs-toggle="tab" data-bs-target="#tab-basketball" type="button" role="tab">Basketball</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-sport="hockey-skaters" data-bs-toggle="tab" data-bs-target="#tab-hockey-skaters" type="button" role="tab">Hockey (Skaters)</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-sport="hockey-goalies" data-bs-toggle="tab" data-bs-target="#tab-hockey-goalies" type="button" role="tab">Hockey (Goalies)</button>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+
+    <div class="tab-pane fade show active" id="tab-baseball" role="tabpanel">
+      <div id="baseball-loading" class="loading-placeholder">Loading baseball rankings...</div>
+      <div id="baseball-table-wrap" style="display:none">
+        <table id="baseball-table" class="table table-striped table-bordered w-100"></table>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-football" role="tabpanel">
+      <div id="football-loading" class="loading-placeholder">Loading football rankings...</div>
+      <div id="football-table-wrap" style="display:none">
+        <table id="football-table" class="table table-striped table-bordered w-100"></table>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-basketball" role="tabpanel">
+      <div id="basketball-loading" class="loading-placeholder">Loading basketball rankings...</div>
+      <div id="basketball-table-wrap" style="display:none">
+        <table id="basketball-table" class="table table-striped table-bordered w-100"></table>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-hockey-skaters" role="tabpanel">
+      <div id="hockey-skaters-loading" class="loading-placeholder">Loading hockey skater rankings...</div>
+      <div id="hockey-skaters-table-wrap" style="display:none">
+        <table id="hockey-skaters-table" class="table table-striped table-bordered w-100"></table>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-hockey-goalies" role="tabpanel">
+      <div id="hockey-goalies-loading" class="loading-placeholder">Loading hockey goalie rankings...</div>
+      <div id="hockey-goalies-table-wrap" style="display:none">
+        <table id="hockey-goalies-table" class="table table-striped table-bordered w-100"></table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>Aggregate Dynasty Rankings &mdash; Data updated March 2026</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+<script>
+  const INFO_COLS = new Set(['Player', 'Position', 'Team', 'Age', 'Level', 'ETA']);
+
+  const SPORTS = [
+    { id: 'baseball',       csv: 'baseball/baseball_rankings_master.csv' },
+    { id: 'football',       csv: 'football/football_rankings_master.csv' },
+    { id: 'basketball',     csv: 'basketball/basketball_rankings_master.csv' },
+    { id: 'hockey-skaters', csv: 'hockey/hockey_skaters_master.csv' },
+    { id: 'hockey-goalies', csv: 'hockey/hockey_goalies_master.csv' },
+  ];
+
+  // Position badge colors per sport
+  const POS_BADGE = {
+    baseball: {
+      'SP':   { bg: '#dbeafe', text: '#1e40af' },
+      'RP':   { bg: '#bfdbfe', text: '#1d4ed8' },
+      'C':    { bg: '#fed7aa', text: '#c2410c' },
+      '1B':   { bg: '#bbf7d0', text: '#166534' },
+      '2B':   { bg: '#bbf7d0', text: '#166534' },
+      '3B':   { bg: '#a7f3d0', text: '#065f46' },
+      'SS':   { bg: '#a7f3d0', text: '#065f46' },
+      'OF':   { bg: '#e9d5ff', text: '#6b21a8' },
+      'RF':   { bg: '#e9d5ff', text: '#6b21a8' },
+      'CF':   { bg: '#e9d5ff', text: '#6b21a8' },
+      'LF':   { bg: '#e9d5ff', text: '#6b21a8' },
+      'DH':   { bg: '#e5e7eb', text: '#374151' },
+    },
+    football: {
+      'QB':   { bg: '#fee2e2', text: '#b91c1c' },
+      'RB':   { bg: '#bbf7d0', text: '#166534' },
+      'WR':   { bg: '#bfdbfe', text: '#1e40af' },
+      'TE':   { bg: '#e9d5ff', text: '#6b21a8' },
+      'K':    { bg: '#e5e7eb', text: '#374151' },
+    },
+    basketball: {
+      'G':    { bg: '#bfdbfe', text: '#1e40af' },
+      'F':    { bg: '#bbf7d0', text: '#166534' },
+      'C':    { bg: '#fed7aa', text: '#c2410c' },
+      'G/F':  { bg: '#a5f3fc', text: '#0e7490' },
+      'F/G':  { bg: '#a5f3fc', text: '#0e7490' },
+      'F/C':  { bg: '#fde68a', text: '#92400e' },
+      'C/F':  { bg: '#fde68a', text: '#92400e' },
+    },
+    'hockey-skaters': {
+      'F':    { bg: '#bfdbfe', text: '#1e40af' },
+      'D':    { bg: '#bbf7d0', text: '#166534' },
+    },
+    'hockey-goalies': {
+      'G':    { bg: '#fed7aa', text: '#c2410c' },
+    },
+  };
+
+  const loaded = new Set();
+
+  function shortName(field) {
+    const i = field.indexOf('(');
+    return i > 0 ? field.substring(0, i).trim() : field;
+  }
+
+  // Return a CSS class based on how much sources agree (lower = more agreement)
+  function varianceClass(val) {
+    const v = parseFloat(val);
+    if (v <= 0.15) return 'var-low';
+    if (v <= 0.35) return 'var-mid';
+    return 'var-high';
+  }
+
+  function buildTable(sportId, fields, data) {
+    const avgRankIdx = fields.indexOf('Average Rank');
+    const rankVarIdx = fields.indexOf('Rank Variance');
+    const posBadges  = POS_BADGE[sportId] || {};
+
+    const columns = fields.map((field, idx) => {
+      const isPlayer   = field === 'Player';
+      const isPosition = field === 'Position';
+      const isAvgRank  = idx === avgRankIdx;
+      const isVariance = idx === rankVarIdx;
+      const isSource   = !INFO_COLS.has(field) && idx < avgRankIdx;
+      const isNumeric  = isAvgRank || isVariance || isSource;
+
+      let className = '';
+      if (isPlayer)        className = 'col-player';
+      else if (isAvgRank)  className = 'col-avg-rank';
+      else if (isVariance) className = 'col-variance';
+      else if (isSource)   className = 'col-source';
+
+      const titleHtml = isSource
+        ? `<span class="src-hdr" title="${field}">${shortName(field)}</span>`
+        : field;
+
+      return {
+        title: titleHtml,
+        data: field,
+        className: className,
+        defaultContent: '',
+        type: isNumeric ? 'num' : 'string',
+        render: function(val, type, row) {
+          // Push blanks to the bottom when sorting numeric columns
+          if (isNumeric && (type === 'sort' || type === 'type')) {
+            return (val === '' || val == null) ? 99999 : parseFloat(val);
+          }
+          if (type === 'display') {
+            if (val === '' || val == null) {
+              return isSource ? '<span class="text-muted">—</span>' : '';
+            }
+            if (isPosition) {
+              const colors = posBadges[val];
+              return colors
+                ? `<span class="pos-badge" style="background:${colors.bg};color:${colors.text}">${val}</span>`
+                : val;
+            }
+            if (isAvgRank)  return parseFloat(val).toFixed(1);
+            if (isVariance) {
+              const cls = varianceClass(val);
+              return `<span class="${cls}">${parseFloat(val).toFixed(4)}</span>`;
+            }
+            if (isSource) return Math.round(parseFloat(val));
+          }
+          return val;
+        }
+      };
+    });
+
+    $(`#${sportId}-loading`).hide();
+    $(`#${sportId}-table-wrap`).show();
+
+    $(`#${sportId}-table`).DataTable({
+      data: data,
+      columns: columns,
+      order: [[avgRankIdx, 'asc']],
+      pageLength: 50,
+      lengthMenu: [[25, 50, 100, -1], ['25', '50', '100', 'All']],
+      scrollX: true,
+      scrollY: 'calc(100vh - 300px)',
+      scrollCollapse: true,
+      fixedColumns: { leftColumns: 1 },
+      language: {
+        search: 'Search:',
+        lengthMenu: 'Show _MENU_',
+        info: 'Showing _START_&ndash;_END_ of _TOTAL_ players',
+        infoFiltered: '(filtered from _MAX_ total)',
+        zeroRecords: 'No matching players found.',
+      },
+    });
+  }
+
+  function loadSport(sportId, csvPath) {
+    if (loaded.has(sportId)) return;
+    loaded.add(sportId);
+
+    Papa.parse(csvPath, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: function(results) {
+        buildTable(sportId, results.meta.fields, results.data);
+      },
+      error: function() {
+        $(`#${sportId}-loading`).html('<div class="text-danger p-4">Failed to load rankings data.</div>');
+      }
+    });
+  }
+
+  // Load baseball immediately on page load
+  loadSport(SPORTS[0].id, SPORTS[0].csv);
+
+  // Lazy-load each sport when its tab is first clicked
+  document.querySelectorAll('#sportTabs [data-bs-toggle="tab"]').forEach((btn, i) => {
+    btn.addEventListener('shown.bs.tab', function() {
+      loadSport(SPORTS[i].id, SPORTS[i].csv);
+    });
+  });
+</script>
+
+</body>
+</html>
