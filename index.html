@@ -6,7 +6,6 @@
   <title>Aggregate Dynasty Rankings</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-  <link href="https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.bootstrap5.min.css" rel="stylesheet">
   <style>
     body { background: #f4f6f9; }
 
@@ -112,8 +111,6 @@
     /* Source header abbreviation tooltip hint */
     th .src-hdr { cursor: help; border-bottom: 1px dashed #aaa; }
 
-    /* FixedColumns left border separator */
-    table.dataTable.fixedColumns-left { border-right: 2px solid #dee2e6; }
 
     footer { color: #888; font-size: 0.8rem; padding: 2rem 0; text-align: center; }
   </style>
@@ -193,7 +190,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
-<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
 <script>
@@ -331,7 +327,6 @@
       scrollX: true,
       scrollY: 'calc(100vh - 300px)',
       scrollCollapse: true,
-      fixedColumns: { leftColumns: 1 },
       language: {
         search: 'Search:',
         lengthMenu: 'Show _MENU_',
