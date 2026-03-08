@@ -48,7 +48,7 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 
 **Baseball** (5 sources): FantraxHQ, HarryKnowsBall, The Athletic, RotoWorld, FantasyPros
 
-**Football** (5 sources): PFF (Nathan Jahnke), KeepTradeCut (Crowdsourced), FantasyPros, DraftSharks, Dynasty League Football (Crowdsourced)
+**Football** (6 sources): PFF (Nathan Jahnke), KeepTradeCut (Crowdsourced), FantasyPros, DraftSharks, Dynasty League Football (Crowdsourced), FantasyCalc (Crowdsourced, Mar 2026)
 
 **Basketball** (5 sources, 316 players, 273 with multi-source averages):
 - `Dizzle Dynasty (Cat, Mar 2026)` — category leagues, 213 players (may be truncated)
@@ -125,7 +125,7 @@ Common name mismatches to watch for across football sources:
 ## Notes
 - `rankings.csv` was deleted (was a long-format duplicate, not needed).
 - KTC data was cut off at rank 250 (more may exist beyond that).
-- Football master includes ~297 players across 5 sources.
+- Football master includes ~313 players across 6 sources. Age populated from FantasyCalc (205 players).
 - Basketball Dizzle Dynasty source (Mar 2026) was truncated at rank 213 — may be incomplete.
 - Basketball master has 5 sources and 316 players as of Mar 2026.
 - Hockey skaters master has 3 sources and ~370 players as of Mar 2026.
