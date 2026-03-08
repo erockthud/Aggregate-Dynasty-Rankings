@@ -122,6 +122,24 @@ Common name mismatches to watch for across football sources:
 - "Cam Skattebo" (canonical) vs "Cameron Skattebo" (DraftSharks)
 - "Chigoziem Okonkwo" (canonical) vs "Chig Okonkwo" (FantasyPros/DLF)
 
+## Website (GitHub Pages)
+The data is published as a static site at the repo's GitHub Pages URL. The entry point is `index.html` in the root.
+
+- Tabbed interface: Baseball, Football, Basketball, Hockey (Skaters), Hockey (Goalies)
+- Each tab lazy-loads its CSV on first click; baseball loads immediately on page open
+- Active tab has a sport-colored background fill; the page background also shifts to the sport's theme color
+  - Baseball = light blue, Football = light green, Basketball = light orange, Hockey = light purple
+- Rank Variance column uses a green→yellow→red cell background gradient (0.0 = green, 0.5+ = red)
+- Position badges are color-coded per sport
+- **Hidden columns**: Level and ETA are hidden from baseball, basketball, and football tables (present in CSVs but not displayed)
+- Hockey has no Level/ETA/Team columns in the CSV at all
+- CSV parsing uses Papa Parse with `header: false` + manual field extraction to avoid a known Papa Parse bug with certain CRLF files
+
+## Football-Specific Notes
+- Age data source: FantasyCalc (Mar 2026) — stored as decimal (e.g. 24.1); blank for rookies
+- Merge script for new football sources: `scripts/merge_fantasycalc_football.py` (use as template)
+- When adding a new football source, also backfill Age if the source provides it and the player's Age is currently blank
+
 ## Notes
 - `rankings.csv` was deleted (was a long-format duplicate, not needed).
 - KTC data was cut off at rank 250 (more may exist beyond that).
@@ -130,5 +148,6 @@ Common name mismatches to watch for across football sources:
 - Basketball master has 5 sources and 316 players as of Mar 2026.
 - Hockey skaters master has 3 sources and ~370 players as of Mar 2026.
 - Hockey goalies master has 3 sources and 70 players as of Mar 2026.
+- Hockey Age column is blank for all players — needs a source (future task).
 - Lineup Experts hockey source is from Oct 2025 (older than Dobber/Hashtag); skater ranks are overall (includes goalie rank slots in the gaps); goalie ranks are converted to goalie-only ranks 1–34 (by their order of appearance in the combined list).
 - `hockey_rankings_master.csv` is now unused/empty — hockey is split into skaters and goalies files.
