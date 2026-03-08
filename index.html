@@ -315,12 +315,24 @@
       };
     });
 
+    // Convert object rows to arrays so DataTables uses numeric index access
+    // instead of string property lookup (avoids edge cases with special chars in keys)
+    const dataArrays = data.map(function(row) {
+      return visibleFields.map(function(f) {
+        var v = row[f];
+        return (v === undefined || v === null) ? '' : v;
+      });
+    });
+    var dtColumns = columns.map(function(col, i) {
+      return Object.assign({}, col, { data: i });
+    });
+
     $(`#${sportId}-loading`).hide();
     $(`#${sportId}-table-wrap`).show();
 
     $(`#${sportId}-table`).DataTable({
-      data: data,
-      columns: columns,
+      data: dataArrays,
+      columns: dtColumns,
       order: [[avgRankIdx, 'asc']],
       pageLength: 50,
       lengthMenu: [[25, 50, 100, -1], ['25', '50', '100', 'All']],
