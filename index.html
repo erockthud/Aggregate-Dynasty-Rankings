@@ -360,12 +360,15 @@
         var dbg = document.getElementById('debug-output');
         dbg.style.display = 'block';
         dbg.textContent += sport.id + ' raw[0..300]: ' + JSON.stringify(text.substring(0, 300)) + '\n';
-        var results = Papa.parse(text, {
-          header: true,
-          skipEmptyLines: true,
-          transformHeader: function(h) { return h.replace(/^\uFEFF/, '').trim(); },
+        var parsed = Papa.parse(text, { header: false, skipEmptyLines: true });
+        var allRows = parsed.data;
+        var fields  = allRows[0].map(function(h) { return h.replace(/^\uFEFF/, '').trim(); });
+        var data    = allRows.slice(1).map(function(row) {
+          var obj = {};
+          fields.forEach(function(f, i) { obj[f] = (row[i] !== undefined ? row[i] : ''); });
+          return obj;
         });
-        buildTable(sport.id, results.meta.fields, results.data, sport.hideCols);
+        buildTable(sport.id, fields, data, sport.hideCols);
       })
       .catch(function() {
         $(`#${sport.id}-loading`).html('<div class="text-danger p-4">Failed to load rankings data.</div>');
