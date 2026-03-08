@@ -260,6 +260,7 @@
   }
 
   function buildTable(sportId, fields, data, hideCols) {
+    console.log(sportId, 'fields:', fields, 'last 3:', fields.slice(-3).map(f => JSON.stringify(f)));
     const visibleFields = hideCols.size ? fields.filter(f => !hideCols.has(f)) : fields;
     const avgRankIdx = visibleFields.indexOf('Average Rank');
     const rankVarIdx = visibleFields.indexOf('Rank Variance');
