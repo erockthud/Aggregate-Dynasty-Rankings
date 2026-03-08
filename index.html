@@ -7,7 +7,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
   <style>
-    body { background: #f4f6f9; }
+    /* Sport theme backgrounds */
+    body                    { background: #f4f6f9; transition: background 0.2s; }
+    body.theme-baseball     { background: #e8f4fd; }
+    body.theme-football     { background: #eafaf1; }
+    body.theme-basketball   { background: #fef6ee; }
+    body.theme-hockey       { background: #f4f0fb; }
 
     /* ── Header ── */
     header {
@@ -38,17 +43,21 @@
       color: #343a40;
       border-color: transparent;
     }
-    .nav-tabs .nav-link.active {
-      background: white;
-      font-weight: 700;
-    }
 
-    /* Sport-specific active tab underline */
-    [data-sport="baseball"].active       { border-bottom-color: #2e86c1; color: #1a5276; }
-    [data-sport="football"].active       { border-bottom-color: #1e8449; color: #145a32; }
-    [data-sport="basketball"].active     { border-bottom-color: #ca6f1e; color: #784212; }
+    /* Sport-specific active tab — colored fill + matching underline */
+    [data-sport="baseball"].active {
+      background: #dbeafe !important; border-bottom-color: #2563eb; color: #1e3a8a; font-weight: 700;
+    }
+    [data-sport="football"].active {
+      background: #dcfce7 !important; border-bottom-color: #16a34a; color: #14532d; font-weight: 700;
+    }
+    [data-sport="basketball"].active {
+      background: #ffedd5 !important; border-bottom-color: #ea580c; color: #7c2d12; font-weight: 700;
+    }
     [data-sport="hockey-skaters"].active,
-    [data-sport="hockey-goalies"].active { border-bottom-color: #7d3c98; color: #5b2c8d; }
+    [data-sport="hockey-goalies"].active {
+      background: #ede9fe !important; border-bottom-color: #7c3aed; color: #4c1d95; font-weight: 700;
+    }
 
     /* ── Table wrapper card ── */
     .loading-placeholder {
@@ -81,34 +90,14 @@
       white-space: nowrap;
     }
 
-    /* Average Rank column — sport-specific background */
+    /* Average Rank column */
     table.dataTable td.col-avg-rank { font-weight: 700; text-align: center; }
-
-    /* Baseball — light blue */
-    #baseball-table       td.col-avg-rank { background-color: #d6eaf8 !important; color: #1a5276; }
-    #baseball-table       th.col-avg-rank { background-color: #aed6f1 !important; }
-    /* Football — light green */
-    #football-table       td.col-avg-rank { background-color: #d5f5e3 !important; color: #145a32; }
-    #football-table       th.col-avg-rank { background-color: #a9dfbf !important; }
-    /* Basketball — light orange */
-    #basketball-table     td.col-avg-rank { background-color: #fdebd0 !important; color: #784212; }
-    #basketball-table     th.col-avg-rank { background-color: #fad7a0 !important; }
-    /* Hockey — light purple */
-    #hockey-skaters-table td.col-avg-rank,
-    #hockey-goalies-table td.col-avg-rank { background-color: #e8daef !important; color: #5b2c8d; }
-    #hockey-skaters-table th.col-avg-rank,
-    #hockey-goalies-table th.col-avg-rank { background-color: #d2b4de !important; }
 
     /* Source columns */
     table.dataTable td.col-source { text-align: center; color: #333; }
 
-    /* Rank Variance — color coded by agreement level */
-    table.dataTable td.col-variance { text-align: center; }
-    .var-low  { color: #15803d; font-weight: 600; }  /* good agreement  */
-    .var-mid  { color: #b45309; }                    /* some disagreement */
-    .var-high { color: #b91c1c; }                    /* high disagreement */
-
-
+    /* Rank Variance — cell background shading applied via JS */
+    table.dataTable td.col-variance { text-align: center; font-weight: 600; }
 
     footer { color: #888; font-size: 0.8rem; padding: 2rem 0; text-align: center; }
   </style>
@@ -182,8 +171,7 @@
   </div>
 </div>
 
-<footer>Aggregate Dynasty Rankings &mdash; Data updated March 2026 &mdash; <span id="debug-version">v9</span></footer>
-<div id="debug-output" style="font-size:0.75rem;padding:8px;background:#fff3cd;display:none;white-space:pre-wrap;word-break:break-all;margin:8px"></div>
+<footer>Aggregate Dynasty Rankings &mdash; Data updated March 2026</footer>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -250,18 +238,35 @@
     return i > 0 ? field.substring(0, i).trim() : field;
   }
 
-  // Return a CSS class based on how much sources agree (lower = more agreement)
-  function varianceClass(val) {
-    const v = parseFloat(val);
-    if (v <= 0.15) return 'var-low';
-    if (v <= 0.35) return 'var-mid';
-    return 'var-high';
+  // Return a cell background color on a green→yellow→red gradient (0 = best, 0.5+ = worst)
+  function varianceBg(val) {
+    const v = Math.min(Math.max(parseFloat(val) || 0, 0), 0.5);
+    const t = v / 0.5; // 0 → 1
+    let r, g, b;
+    if (t < 0.5) {
+      // green #bbf7d0 → yellow #fef9c3
+      const s = t * 2;
+      r = Math.round(187 + (254 - 187) * s);
+      g = Math.round(247 + (249 - 247) * s);
+      b = Math.round(208 + (195 - 208) * s);
+    } else {
+      // yellow #fef9c3 → red #fecaca
+      const s = (t - 0.5) * 2;
+      r = Math.round(254 + (254 - 254) * s);
+      g = Math.round(249 + (202 - 249) * s);
+      b = Math.round(195 + (202 - 195) * s);
+    }
+    return `rgb(${r},${g},${b})`;
+  }
+
+  // Update the page background theme based on the active sport tab
+  function setTheme(sportId) {
+    const cls = sportId.startsWith('hockey') ? 'hockey' : sportId;
+    document.body.className = document.body.className.replace(/\btheme-\w+/g, '').trim();
+    document.body.classList.add('theme-' + cls);
   }
 
   function buildTable(sportId, fields, data, hideCols) {
-    var dbg = document.getElementById('debug-output');
-    dbg.style.display = 'block';
-    dbg.textContent += sportId + ': ' + fields.length + ' fields, last3=' + JSON.stringify(fields.slice(-3)) + '\n';
     const visibleFields = hideCols.size ? fields.filter(f => !hideCols.has(f)) : fields;
     let avgRankIdx = visibleFields.indexOf('Average Rank');
     if (avgRankIdx === -1) avgRankIdx = visibleFields.findIndex(f => f.includes('Average'));
@@ -285,7 +290,7 @@
 
       const titleHtml = isSource ? shortName(field) : field;
 
-      return {
+      const colDef = {
         title: titleHtml,
         data: field,
         className: className,
@@ -307,15 +312,20 @@
                 : val;
             }
             if (isAvgRank)  return parseFloat(val).toFixed(1);
-            if (isVariance) {
-              const cls = varianceClass(val);
-              return `<span class="${cls}">${parseFloat(val).toFixed(4)}</span>`;
-            }
+            if (isVariance) return parseFloat(val).toFixed(4);
             if (isSource) return Math.round(parseFloat(val));
           }
           return val;
         }
       };
+      if (isVariance) {
+        colDef.createdCell = function(td, cellData) {
+          if (cellData !== '' && cellData != null && cellData !== '') {
+            td.style.backgroundColor = varianceBg(cellData);
+          }
+        };
+      }
+      return colDef;
     });
 
     // Convert object rows to arrays so DataTables uses numeric index access
@@ -357,9 +367,6 @@
     fetch(sport.csv)
       .then(function(r) { return r.text(); })
       .then(function(text) {
-        var dbg = document.getElementById('debug-output');
-        dbg.style.display = 'block';
-        dbg.textContent += sport.id + ' raw[0..300]: ' + JSON.stringify(text.substring(0, 300)) + '\n';
         var parsed = Papa.parse(text, { header: false, skipEmptyLines: true });
         var allRows = parsed.data;
         var fields  = allRows[0].map(function(h) { return h.replace(/^\uFEFF/, '').trim(); });
@@ -375,12 +382,14 @@
       });
   }
 
-  // Load baseball immediately on page load
+  // Set initial theme (baseball) and load it
+  setTheme(SPORTS[0].id);
   loadSport(SPORTS[0]);
 
-  // Lazy-load each sport when its tab is first clicked
+  // Lazy-load each sport when its tab is first clicked; update page theme
   document.querySelectorAll('#sportTabs [data-bs-toggle="tab"]').forEach((btn, i) => {
     btn.addEventListener('shown.bs.tab', function() {
+      setTheme(SPORTS[i].id);
       loadSport(SPORTS[i]);
     });
   });
