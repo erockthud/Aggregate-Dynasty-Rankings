@@ -196,11 +196,11 @@
   const INFO_COLS = new Set(['Player', 'Position', 'Team', 'Age', 'Level', 'ETA']);
 
   const SPORTS = [
-    { id: 'baseball',       csv: 'baseball/baseball_rankings_master.csv' },
-    { id: 'football',       csv: 'football/football_rankings_master.csv' },
-    { id: 'basketball',     csv: 'basketball/basketball_rankings_master.csv' },
-    { id: 'hockey-skaters', csv: 'hockey/hockey_skaters_master.csv' },
-    { id: 'hockey-goalies', csv: 'hockey/hockey_goalies_master.csv' },
+    { id: 'baseball',       csv: 'baseball/baseball_rankings_master.csv',   hideCols: new Set() },
+    { id: 'football',       csv: 'football/football_rankings_master.csv',   hideCols: new Set(['Level', 'ETA']) },
+    { id: 'basketball',     csv: 'basketball/basketball_rankings_master.csv', hideCols: new Set() },
+    { id: 'hockey-skaters', csv: 'hockey/hockey_skaters_master.csv',        hideCols: new Set() },
+    { id: 'hockey-goalies', csv: 'hockey/hockey_goalies_master.csv',        hideCols: new Set() },
   ];
 
   // Position badge colors per sport
@@ -259,12 +259,13 @@
     return 'var-high';
   }
 
-  function buildTable(sportId, fields, data) {
-    const avgRankIdx = fields.indexOf('Average Rank');
-    const rankVarIdx = fields.indexOf('Rank Variance');
+  function buildTable(sportId, fields, data, hideCols) {
+    const visibleFields = hideCols.size ? fields.filter(f => !hideCols.has(f)) : fields;
+    const avgRankIdx = visibleFields.indexOf('Average Rank');
+    const rankVarIdx = visibleFields.indexOf('Rank Variance');
     const posBadges  = POS_BADGE[sportId] || {};
 
-    const columns = fields.map((field, idx) => {
+    const columns = visibleFields.map((field, idx) => {
       const isPlayer   = field === 'Player';
       const isPosition = field === 'Position';
       const isAvgRank  = idx === avgRankIdx;
@@ -337,30 +338,30 @@
     });
   }
 
-  function loadSport(sportId, csvPath) {
-    if (loaded.has(sportId)) return;
-    loaded.add(sportId);
+  function loadSport(sport) {
+    if (loaded.has(sport.id)) return;
+    loaded.add(sport.id);
 
-    Papa.parse(csvPath, {
+    Papa.parse(sport.csv, {
       download: true,
       header: true,
       skipEmptyLines: true,
       complete: function(results) {
-        buildTable(sportId, results.meta.fields, results.data);
+        buildTable(sport.id, results.meta.fields, results.data, sport.hideCols);
       },
       error: function() {
-        $(`#${sportId}-loading`).html('<div class="text-danger p-4">Failed to load rankings data.</div>');
+        $(`#${sport.id}-loading`).html('<div class="text-danger p-4">Failed to load rankings data.</div>');
       }
     });
   }
 
   // Load baseball immediately on page load
-  loadSport(SPORTS[0].id, SPORTS[0].csv);
+  loadSport(SPORTS[0]);
 
   // Lazy-load each sport when its tab is first clicked
   document.querySelectorAll('#sportTabs [data-bs-toggle="tab"]').forEach((btn, i) => {
     btn.addEventListener('shown.bs.tab', function() {
-      loadSport(SPORTS[i].id, SPORTS[i].csv);
+      loadSport(SPORTS[i]);
     });
   });
 </script>
