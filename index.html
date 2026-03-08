@@ -79,17 +79,6 @@
     /* Player name */
     table.dataTable td.col-player { font-weight: 600; min-width: 150px; white-space: nowrap; }
 
-    /* Position badge */
-    .pos-badge {
-      display: inline-block;
-      padding: 0.15em 0.55em;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      white-space: nowrap;
-    }
-
     /* Average Rank column */
     table.dataTable td.col-avg-rank { font-weight: 700; text-align: center; }
 
@@ -190,47 +179,6 @@
     { id: 'hockey-goalies', csv: 'hockey/hockey_goalies_master.csv',        hideCols: new Set() },
   ];
 
-  // Position badge colors per sport
-  const POS_BADGE = {
-    baseball: {
-      'SP':   { bg: '#dbeafe', text: '#1e40af' },
-      'RP':   { bg: '#bfdbfe', text: '#1d4ed8' },
-      'C':    { bg: '#fed7aa', text: '#c2410c' },
-      '1B':   { bg: '#bbf7d0', text: '#166534' },
-      '2B':   { bg: '#bbf7d0', text: '#166534' },
-      '3B':   { bg: '#a7f3d0', text: '#065f46' },
-      'SS':   { bg: '#a7f3d0', text: '#065f46' },
-      'OF':   { bg: '#e9d5ff', text: '#6b21a8' },
-      'RF':   { bg: '#e9d5ff', text: '#6b21a8' },
-      'CF':   { bg: '#e9d5ff', text: '#6b21a8' },
-      'LF':   { bg: '#e9d5ff', text: '#6b21a8' },
-      'DH':   { bg: '#e5e7eb', text: '#374151' },
-    },
-    football: {
-      'QB':   { bg: '#fee2e2', text: '#b91c1c' },
-      'RB':   { bg: '#bbf7d0', text: '#166534' },
-      'WR':   { bg: '#bfdbfe', text: '#1e40af' },
-      'TE':   { bg: '#e9d5ff', text: '#6b21a8' },
-      'K':    { bg: '#e5e7eb', text: '#374151' },
-    },
-    basketball: {
-      'G':    { bg: '#bfdbfe', text: '#1e40af' },
-      'F':    { bg: '#bbf7d0', text: '#166534' },
-      'C':    { bg: '#fed7aa', text: '#c2410c' },
-      'G/F':  { bg: '#a5f3fc', text: '#0e7490' },
-      'F/G':  { bg: '#a5f3fc', text: '#0e7490' },
-      'F/C':  { bg: '#fde68a', text: '#92400e' },
-      'C/F':  { bg: '#fde68a', text: '#92400e' },
-    },
-    'hockey-skaters': {
-      'F':    { bg: '#bfdbfe', text: '#1e40af' },
-      'D':    { bg: '#bbf7d0', text: '#166534' },
-    },
-    'hockey-goalies': {
-      'G':    { bg: '#fed7aa', text: '#c2410c' },
-    },
-  };
-
   const loaded = new Set();
 
   function shortName(field) {
@@ -272,7 +220,6 @@
     if (avgRankIdx === -1) avgRankIdx = visibleFields.findIndex(f => f.includes('Average'));
     if (avgRankIdx === -1) { console.error(sportId, 'could not find Average Rank column'); return; }
     const rankVarIdx = visibleFields.indexOf('Rank Variance');
-    const posBadges  = POS_BADGE[sportId] || {};
 
     const columns = visibleFields.map((field, idx) => {
       const isPlayer   = field === 'Player';
@@ -304,12 +251,6 @@
           if (type === 'display') {
             if (val === '' || val == null) {
               return isSource ? '<span class="text-muted">—</span>' : '';
-            }
-            if (isPosition) {
-              const colors = posBadges[val];
-              return colors
-                ? `<span class="pos-badge" style="background:${colors.bg};color:${colors.text}">${val}</span>`
-                : val;
             }
             if (isAvgRank)  return parseFloat(val).toFixed(1);
             if (isVariance) return parseFloat(val).toFixed(4);

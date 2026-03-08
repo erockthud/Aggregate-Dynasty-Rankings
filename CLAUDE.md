@@ -57,17 +57,19 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Hashtag Basketball (Pts, Feb 2026)` — points leagues, 250 players (by Joseph Mamone)
 - `RoundBallRhettoric (Pts, Mar 2026)` — points leagues, 228 players
 
-**Hockey Skaters** (3 sources, ~370 players, ~254 with multi-source averages):
+**Hockey Skaters** (4 sources, 400 players, 330 with multi-source averages):
 - `Dobber (Mar 2026)` — 300 players; "y" flag in source = defenseman
 - `Hashtag Hockey (Mar 2026)` — 200 players (skaters only)
-- `Lineup Experts (Oct 2025)` — 310 skaters extracted from combined 350-player list (skaters + goalies); overall ranks preserved (includes goalie rank slots)
+- `Lineup Experts (Oct 2025)` — 310 skaters extracted from combined 350-player list (skaters + goalies); re-ranked sequentially 1–310
+- `ErockThud (Mar 2026)` — 373-entry combined list (skaters + goalies + draft picks); 324 skaters matched
 
-**Hockey Goalies** (3 sources, 70 goalies, 44 with multi-source averages):
+**Hockey Goalies** (4 sources, 69 goalies, 44 with multi-source averages):
 - `Dobber (Mar 2026)` — 60 goalies
 - `Hashtag Hockey (Mar 2026)` — 50 goalies
 - `Lineup Experts (Oct 2025)` — 34 goalies extracted from combined list
+- `ErockThud (Mar 2026)` — 34 goalies matched from combined list
 
-Hockey merge scripts: `create_dobber_hockey_skaters.py`, `create_dobber_hockey_goalies.py`, `merge_hashtag_hockey_skaters.py`, `merge_hashtag_hockey_goalies.py`, `merge_lineup_experts_hockey_skaters.py`, `merge_lineup_experts_hockey_goalies.py`
+Hockey merge scripts: `create_dobber_hockey_skaters.py`, `create_dobber_hockey_goalies.py`, `merge_hashtag_hockey_skaters.py`, `merge_hashtag_hockey_goalies.py`, `merge_lineup_experts_hockey_skaters.py`, `merge_lineup_experts_hockey_goalies.py`, `merge_erock_hockey.py`
 
 ## Basketball-Specific Format
 Basketball source column headers include a league format indicator: `"Source (Format, Date)"` where Format is `Cat` (category), `Pts` (points), or `Unk` (unknown). This is in addition to the standard date field.
@@ -148,6 +150,6 @@ The data is published as a static site at the repo's GitHub Pages URL. The entry
 - Basketball master has 5 sources and 316 players as of Mar 2026.
 - Hockey skaters master has 3 sources and ~370 players as of Mar 2026.
 - Hockey goalies master has 3 sources and 70 players as of Mar 2026.
-- Hockey Age column is blank for all players — needs a source (future task).
-- Lineup Experts hockey source is from Oct 2025 (older than Dobber/Hashtag); skater ranks are overall (includes goalie rank slots in the gaps); goalie ranks are converted to goalie-only ranks 1–34 (by their order of appearance in the combined list).
+- Hockey Age column populated from a 500-player ranked list (ages as of Oct 2025); ~346 skaters and ~46 goalies have ages. Players not in that list remain blank. Script: `scripts/add_hockey_ages.py`.
+- Lineup Experts hockey source is from Oct 2025 (older than Dobber/Hashtag); both skaters (1–310) and goalies (1–34) are re-ranked sequentially within their group by order of appearance in the combined list.
 - `hockey_rankings_master.csv` is now unused/empty — hockey is split into skaters and goalies files.
