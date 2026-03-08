@@ -183,9 +183,9 @@
   const INFO_COLS = new Set(['Player', 'Position', 'Team', 'Age', 'Level', 'ETA']);
 
   const SPORTS = [
-    { id: 'baseball',       csv: 'baseball/baseball_rankings_master.csv',   hideCols: new Set() },
+    { id: 'baseball',       csv: 'baseball/baseball_rankings_master.csv',   hideCols: new Set(['Level', 'ETA']) },
     { id: 'football',       csv: 'football/football_rankings_master.csv',   hideCols: new Set(['Level', 'ETA']) },
-    { id: 'basketball',     csv: 'basketball/basketball_rankings_master.csv', hideCols: new Set() },
+    { id: 'basketball',     csv: 'basketball/basketball_rankings_master.csv', hideCols: new Set(['Level', 'ETA']) },
     { id: 'hockey-skaters', csv: 'hockey/hockey_skaters_master.csv',        hideCols: new Set() },
     { id: 'hockey-goalies', csv: 'hockey/hockey_goalies_master.csv',        hideCols: new Set() },
   ];
