@@ -362,6 +362,7 @@
         input.title = field;
         input.dataset.sourceField = field;
         input.addEventListener('input', () => recomputeWeightedAvg(sportId));
+        input.addEventListener('click', e => e.stopPropagation());
         th.appendChild(input);
       } else if (idx === avgRankIdx) {
         th.innerHTML = '<span style="font-size:0.68rem;color:#999;font-weight:normal">wtd avg</span>';
