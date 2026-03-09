@@ -88,6 +88,32 @@
     /* Rank Variance — cell background shading applied via JS */
     table.dataTable td.col-variance { text-align: center; font-weight: 600; }
 
+    /* Weight row */
+    table.dataTable thead tr.weight-row th {
+      background: #f1f3f5;
+      padding: 3px 4px;
+      border-top: 1px solid #dee2e6;
+      text-align: center;
+      vertical-align: middle;
+    }
+    table.dataTable thead tr.weight-row th.weight-label {
+      font-size: 0.7rem;
+      color: #888;
+      font-weight: 500;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .weight-input {
+      width: 50px;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1px 3px;
+      border: 1px solid #ced4da;
+      border-radius: 3px;
+      background: white;
+    }
+    .weight-input:focus { outline: none; border-color: #86b7fe; box-shadow: 0 0 0 2px rgba(13,110,253,0.15); }
+
     footer { color: #888; font-size: 0.8rem; padding: 2rem 0; text-align: center; }
   </style>
 </head>
@@ -171,6 +197,9 @@
 <script>
   const INFO_COLS = new Set(['Player', 'Position', 'Team', 'Age', 'Level', 'ETA']);
 
+  // Per-sport metadata for weight-based recalculation
+  const sportMeta = {};
+
   const SPORTS = [
     { id: 'baseball',       csv: 'baseball/baseball_rankings_master.csv',   hideCols: new Set(['Level', 'ETA']) },
     { id: 'football',       csv: 'football/football_rankings_master.csv',   hideCols: new Set(['Level', 'ETA']) },
@@ -220,6 +249,11 @@
     if (avgRankIdx === -1) avgRankIdx = visibleFields.findIndex(f => f.includes('Average'));
     if (avgRankIdx === -1) { console.error(sportId, 'could not find Average Rank column'); return; }
     const rankVarIdx = visibleFields.indexOf('Rank Variance');
+
+    // Identify source columns (everything between info cols and Average Rank)
+    const sourceCols = visibleFields
+      .map((f, i) => ({ name: f, arrayIdx: i }))
+      .filter(({name, arrayIdx}) => !INFO_COLS.has(name) && arrayIdx < avgRankIdx);
 
     const columns = visibleFields.map((field, idx) => {
       const isPlayer   = field === 'Player';
@@ -284,7 +318,7 @@
     $(`#${sportId}-loading`).hide();
     $(`#${sportId}-table-wrap`).show();
 
-    $(`#${sportId}-table`).DataTable({
+    const dt = $(`#${sportId}-table`).DataTable({
       data: dataArrays,
       columns: dtColumns,
       order: [[avgRankIdx, 'asc']],
@@ -299,6 +333,75 @@
         zeroRecords: 'No matching players found.',
       },
     });
+
+    // Store metadata for weight recalculation
+    sportMeta[sportId] = { dt, sourceCols, avgRankArrayIdx: avgRankIdx };
+
+    // Add weight row to thead
+    addWeightRow(sportId, visibleFields, avgRankIdx, sourceCols);
+  }
+
+  function addWeightRow(sportId, visibleFields, avgRankIdx, sourceCols) {
+    const sourceColNames = new Set(sourceCols.map(s => s.name));
+    const thead = document.querySelector(`#${sportId}-table thead`);
+    const tr = document.createElement('tr');
+    tr.className = 'weight-row';
+
+    visibleFields.forEach((field, idx) => {
+      const th = document.createElement('th');
+      if (idx === 0) {
+        th.className = 'weight-label';
+        th.textContent = 'Weight:';
+      } else if (sourceColNames.has(field)) {
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.className = 'weight-input';
+        input.step = '0.5';
+        input.min = '0';
+        input.value = '1';
+        input.title = field;
+        input.dataset.sourceField = field;
+        input.addEventListener('input', () => recomputeWeightedAvg(sportId));
+        th.appendChild(input);
+      } else if (idx === avgRankIdx) {
+        th.innerHTML = '<span style="font-size:0.68rem;color:#999;font-weight:normal">wtd avg</span>';
+      }
+      tr.appendChild(th);
+    });
+
+    thead.appendChild(tr);
+  }
+
+  function recomputeWeightedAvg(sportId) {
+    const meta = sportMeta[sportId];
+    if (!meta) return;
+    const { dt, sourceCols, avgRankArrayIdx } = meta;
+
+    // Read current weights from inputs
+    const weights = {};
+    document.querySelectorAll(`#${sportId}-table thead tr.weight-row input.weight-input`).forEach(input => {
+      weights[input.dataset.sourceField] = parseFloat(input.value) || 0;
+    });
+
+    dt.rows().every(function() {
+      const rowData = this.data().slice();
+      let weightedSum = 0, weightSum = 0;
+      sourceCols.forEach(({name, arrayIdx}) => {
+        const val = rowData[arrayIdx];
+        if (val !== '' && val !== null && val !== undefined) {
+          const parsed = parseFloat(val);
+          if (!isNaN(parsed)) {
+            const w = weights[name] || 0;
+            weightedSum += parsed * w;
+            weightSum += w;
+          }
+        }
+      });
+      rowData[avgRankArrayIdx] = weightSum > 0 ? (weightedSum / weightSum) : '';
+      this.data(rowData);
+    });
+
+    dt.draw(false); // preserve current page/search
   }
 
   function loadSport(sport) {
