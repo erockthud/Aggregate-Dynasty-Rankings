@@ -334,8 +334,8 @@
       },
     });
 
-    // Store metadata for weight recalculation
-    sportMeta[sportId] = { dt, sourceCols, avgRankArrayIdx: avgRankIdx };
+    // Store metadata for weight recalculation (originalData is immutable reference)
+    sportMeta[sportId] = { dt, sourceCols, avgRankArrayIdx: avgRankIdx, originalData: dataArrays };
 
     // Add weight row to thead
     addWeightRow(sportId, visibleFields, avgRankIdx, sourceCols);
@@ -376,7 +376,7 @@
   function recomputeWeightedAvg(sportId) {
     const meta = sportMeta[sportId];
     if (!meta) return;
-    const { dt, sourceCols, avgRankArrayIdx } = meta;
+    const { dt, sourceCols, avgRankArrayIdx, originalData } = meta;
 
     // Read current weights from inputs
     const weights = {};
@@ -384,11 +384,12 @@
       weights[input.dataset.sourceField] = parseFloat(input.value) || 0;
     });
 
-    dt.rows().every(function() {
-      const rowData = this.data().slice();
+    // Build new data arrays from the original (unmodified) source values
+    const newData = originalData.map(rowData => {
+      const row = rowData.slice();
       let weightedSum = 0, weightSum = 0;
       sourceCols.forEach(({name, arrayIdx}) => {
-        const val = rowData[arrayIdx];
+        const val = row[arrayIdx];
         if (val !== '' && val !== null && val !== undefined) {
           const parsed = parseFloat(val);
           if (!isNaN(parsed)) {
@@ -398,11 +399,11 @@
           }
         }
       });
-      rowData[avgRankArrayIdx] = weightSum > 0 ? (weightedSum / weightSum) : '';
-      this.data(rowData);
+      row[avgRankArrayIdx] = weightSum > 0 ? (weightedSum / weightSum) : '';
+      return row;
     });
 
-    dt.draw(false); // preserve current page/search
+    dt.clear().rows.add(newData).draw(false);
   }
 
   function loadSport(sport) {
