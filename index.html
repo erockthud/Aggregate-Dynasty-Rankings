@@ -88,26 +88,37 @@
     /* Rank Variance — cell background shading applied via JS */
     table.dataTable td.col-variance { text-align: center; font-weight: 600; }
 
-    /* Weight row */
-    table.dataTable thead tr.weight-row th {
+    /* Weight controls panel */
+    .weights-panel {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px 14px;
+      padding: 7px 12px;
       background: #f1f3f5;
-      padding: 3px 4px;
-      border-top: 1px solid #dee2e6;
-      text-align: center;
-      vertical-align: middle;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+      color: #555;
     }
-    table.dataTable thead tr.weight-row th.weight-label {
-      font-size: 0.7rem;
+    .weights-panel .weight-label {
+      font-weight: 600;
       color: #888;
-      font-weight: 500;
-      text-align: left;
+      margin-right: 4px;
       white-space: nowrap;
+    }
+    .weights-panel label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      margin: 0;
     }
     .weight-input {
       width: 50px;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-align: center;
-      padding: 1px 3px;
+      padding: 2px 4px;
       border: 1px solid #ced4da;
       border-radius: 3px;
       background: white;
@@ -342,40 +353,41 @@
     // Store metadata for weight recalculation (originalData is immutable reference)
     sportMeta[sportId] = { dt, sourceCols, avgRankArrayIdx: avgRankIdx, originalData: dataArrays };
 
-    // Add weight row to thead
-    addWeightRow(sportId, visibleFields, avgRankIdx, sourceCols);
+    // Add weight controls panel above the table
+    addWeightsPanel(sportId, sourceCols);
   }
 
-  function addWeightRow(sportId, visibleFields, avgRankIdx, sourceCols) {
-    const sourceColNames = new Set(sourceCols.map(s => s.name));
-    const thead = document.querySelector(`#${sportId}-table thead`);
-    const tr = document.createElement('tr');
-    tr.className = 'weight-row';
+  function addWeightsPanel(sportId, sourceCols) {
+    const panel = document.createElement('div');
+    panel.className = 'weights-panel';
+    panel.id = `${sportId}-weights`;
 
-    visibleFields.forEach((field, idx) => {
-      const th = document.createElement('th');
-      if (idx === 0) {
-        th.className = 'weight-label';
-        th.textContent = 'Weight:';
-      } else if (sourceColNames.has(field)) {
-        const input = document.createElement('input');
-        input.type = 'number';
-        input.className = 'weight-input';
-        input.step = '0.5';
-        input.min = '0';
-        input.value = '1';
-        input.title = field;
-        input.dataset.sourceField = field;
-        input.addEventListener('input', debounce(() => recomputeWeightedAvg(sportId), 400));
-        input.addEventListener('click', e => e.stopPropagation());
-        th.appendChild(input);
-      } else if (idx === avgRankIdx) {
-        th.innerHTML = '<span style="font-size:0.68rem;color:#999;font-weight:normal">wtd avg</span>';
-      }
-      tr.appendChild(th);
+    const label = document.createElement('span');
+    label.className = 'weight-label';
+    label.textContent = 'Source Weights:';
+    panel.appendChild(label);
+
+    sourceCols.forEach(({name}) => {
+      const lbl = document.createElement('label');
+      lbl.textContent = shortName(name) + ' ';
+
+      const input = document.createElement('input');
+      input.type = 'number';
+      input.className = 'weight-input';
+      input.step = '0.5';
+      input.min = '0';
+      input.value = '1';
+      input.title = name;
+      input.dataset.sourceField = name;
+      input.addEventListener('input', debounce(() => recomputeWeightedAvg(sportId), 400));
+
+      lbl.appendChild(input);
+      panel.appendChild(lbl);
     });
 
-    thead.appendChild(tr);
+    // Insert panel before the table inside the table-wrap div
+    const wrap = document.getElementById(`${sportId}-table-wrap`);
+    wrap.insertBefore(panel, wrap.firstChild);
   }
 
   function recomputeWeightedAvg(sportId) {
@@ -383,9 +395,9 @@
     if (!meta) return;
     const { dt, sourceCols, avgRankArrayIdx, originalData } = meta;
 
-    // Read current weights from inputs
+    // Read current weights from the panel inputs
     const weights = {};
-    document.querySelectorAll(`#${sportId}-table thead tr.weight-row input.weight-input`).forEach(input => {
+    document.querySelectorAll(`#${sportId}-weights input.weight-input`).forEach(input => {
       weights[input.dataset.sourceField] = parseFloat(input.value) || 0;
     });
 
