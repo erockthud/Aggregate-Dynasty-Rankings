@@ -200,6 +200,11 @@
   // Per-sport metadata for weight-based recalculation
   const sportMeta = {};
 
+  function debounce(fn, delay) {
+    let timer;
+    return function() { clearTimeout(timer); timer = setTimeout(fn, delay); };
+  }
+
   const SPORTS = [
     { id: 'baseball',       csv: 'baseball/baseball_rankings_master.csv',   hideCols: new Set(['Level', 'ETA']) },
     { id: 'football',       csv: 'football/football_rankings_master.csv',   hideCols: new Set(['Level', 'ETA']) },
@@ -361,7 +366,7 @@
         input.value = '1';
         input.title = field;
         input.dataset.sourceField = field;
-        input.addEventListener('input', () => recomputeWeightedAvg(sportId));
+        input.addEventListener('input', debounce(() => recomputeWeightedAvg(sportId), 400));
         input.addEventListener('click', e => e.stopPropagation());
         th.appendChild(input);
       } else if (idx === avgRankIdx) {
