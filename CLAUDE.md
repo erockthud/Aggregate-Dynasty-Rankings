@@ -155,7 +155,7 @@ The data is published as a static site at the repo's GitHub Pages URL. The entry
 - **Hidden columns**: Level and ETA are hidden from baseball, basketball, and football tables (present in CSVs but not displayed)
 - Hockey has no Level/ETA/Team columns in the CSV at all
 - CSV parsing uses Papa Parse with `header: false` + manual field extraction to avoid a known Papa Parse bug with certain CRLF files
-- **Weight row**: a second `<thead>` row shows a number input (default 1) below each source column. Changing a weight dynamically recomputes a weighted average (`Σ rank×weight / Σ weight`, skipping blank ranks) and re-sorts the table. Weights are session-only (reset on refresh). `stopPropagation()` on input clicks prevents DataTables from treating them as column sort clicks.
+- **Weight controls panel**: a `<div class="weights-panel">` is injected above each table (outside DataTables entirely) with a labeled number input per source (default 1). Changing a weight triggers a debounced (400ms) recompute: reads all weights, builds new data arrays from `originalData` (immutable CSV snapshot), computes `Σ rank×weight / Σ weight` per player (skipping blank ranks), then reloads DataTables via `dt.clear().rows.add(newData).draw(false)`. Weights are session-only (reset on refresh). Keeping controls outside the DataTables `<thead>` is critical — DataTables manipulates the thead during draws and would interfere with in-thead inputs.
 
 ## Football-Specific Notes
 - Age data source: FantasyCalc (Mar 2026) — stored as decimal (e.g. 24.1); blank for rookies
