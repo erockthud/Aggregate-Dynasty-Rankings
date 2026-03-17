@@ -85,13 +85,6 @@
     /* Source columns */
     table.dataTable td.col-source { text-align: center; color: #333; }
 
-    /* Source column headers — hint that they're hoverable */
-    table.dataTable thead th.col-source-header {
-      cursor: help;
-      border-bottom: 2px dotted #aaa;
-      white-space: nowrap;
-    }
-
     /* Rank Variance — cell background shading applied via JS */
     table.dataTable td.col-variance { text-align: center; font-weight: 600; }
 
@@ -238,23 +231,6 @@
     return i > 0 ? field.substring(0, i).trim() : field;
   }
 
-  function buildTooltip(field) {
-    const match = field.match(/^(.+?)\s*\((.+)\)$/);
-    if (!match) return null;
-    const parts = match[2].split(',').map(s => s.trim());
-    const lines = [match[1].trim()];
-    if (parts.length >= 2) {
-      const first = parts[0];
-      if (first === 'Cat')      lines.push('Format: Category leagues');
-      else if (first === 'Pts') lines.push('Format: Points leagues');
-      else                      lines.push('Author: ' + first);
-      lines.push('Date: ' + parts.slice(1).join(', '));
-    } else {
-      lines.push('Date: ' + parts[0]);
-    }
-    return lines.join('\n');
-  }
-
   // Return a cell background color on a green→yellow→red gradient (0 = best, 0.5+ = worst)
   function varianceBg(val) {
     const v = Math.min(Math.max(parseFloat(val) || 0, 0), 0.5);
@@ -376,16 +352,6 @@
 
     // Store metadata for weight recalculation (originalData is immutable reference)
     sportMeta[sportId] = { dt, sourceCols, avgRankArrayIdx: avgRankIdx, originalData: dataArrays };
-
-    // Add tooltips to source column headers
-    sourceCols.forEach(({name, arrayIdx}) => {
-      const tooltip = buildTooltip(name);
-      if (tooltip) {
-        const th = dt.column(arrayIdx).header();
-        th.setAttribute('title', tooltip);
-        th.classList.add('col-source-header');
-      }
-    });
 
     // Add weight controls panel above the table
     addWeightsPanel(sportId, sourceCols);
