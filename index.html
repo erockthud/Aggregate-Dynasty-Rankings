@@ -155,6 +155,9 @@
     <li class="nav-item" role="presentation">
       <button class="nav-link" data-sport="hockey-goalies" data-bs-toggle="tab" data-bs-target="#tab-hockey-goalies" type="button" role="tab">Hockey (Goalies)</button>
     </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="sources-tab" data-bs-toggle="tab" data-bs-target="#tab-sources" type="button" role="tab">Sources</button>
+    </li>
   </ul>
 
   <div class="tab-content">
@@ -191,6 +194,54 @@
       <div id="hockey-goalies-loading" class="loading-placeholder">Loading hockey goalie rankings...</div>
       <div id="hockey-goalies-table-wrap" style="display:none">
         <table id="hockey-goalies-table" class="table table-striped table-bordered w-100"></table>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-sources" role="tabpanel">
+      <div style="background:white; border-radius:8px; padding:1.25rem; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+        <p class="text-muted mb-3" style="font-size:0.875rem;">All ranking sources used in the aggregator, grouped by sport.</p>
+        <table class="table table-striped table-bordered" style="font-size:0.875rem;">
+          <thead class="table-dark">
+            <tr>
+              <th>Sport</th>
+              <th>Source</th>
+              <th>Author</th>
+              <th>Date</th>
+              <th>Ranking Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Baseball</td><td>FantraxHQ_Roto</td><td>Wes Hughes</td><td>2026-02-23</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>HarryKnowsBall</td><td>Crowdsourced</td><td>2026-03-03</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>The Athletic</td><td>Chris Welsh</td><td>2026-02-27</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>RotoWorld</td><td>Eric Cross</td><td>2026-01-15</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>FantasyPros</td><td>FantasyPros</td><td>2026-03-03</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>Baseball America</td><td>—</td><td>Feb 2026</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>Owen FBB Invitational</td><td>—</td><td>Feb 2026</td><td>—</td></tr>
+            <tr><td>Football</td><td>PFF</td><td>Nathan Jahnke</td><td>Feb 2026</td><td>—</td></tr>
+            <tr><td>Football</td><td>KeepTradeCut</td><td>Crowdsourced</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Football</td><td>FantasyPros</td><td>FantasyPros</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Football</td><td>DraftSharks</td><td>DraftSharks</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Football</td><td>Dynasty League Football</td><td>Crowdsourced</td><td>2026-02-04</td><td>—</td></tr>
+            <tr><td>Football</td><td>FantasyCalc</td><td>Crowdsourced</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Basketball</td><td>Dizzle Dynasty</td><td>—</td><td>Mar 2026</td><td>Category</td></tr>
+            <tr><td>Basketball</td><td>Noah Rubin</td><td>Noah Rubin</td><td>Jan 2026</td><td>Category</td></tr>
+            <tr><td>Basketball</td><td>Matt Lawson</td><td>Matt Lawson</td><td>Mar 2026</td><td>Points</td></tr>
+            <tr><td>Basketball</td><td>Hashtag Basketball</td><td>Joseph Mamone</td><td>Feb 2026</td><td>Points</td></tr>
+            <tr><td>Basketball</td><td>RoundBallRhettoric</td><td>—</td><td>Mar 2026</td><td>Points</td></tr>
+            <tr><td>Hockey (Skaters)</td><td>Dobber</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Hockey (Skaters)</td><td>Hashtag Hockey</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Hockey (Skaters)</td><td>Lineup Experts</td><td>—</td><td>Oct 2025</td><td>—</td></tr>
+            <tr><td>Hockey (Skaters)</td><td>ErockThud</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Hockey (Skaters)</td><td>Haxboy</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Hockey (Goalies)</td><td>Dobber</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Hockey (Goalies)</td><td>Hashtag Hockey</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Hockey (Goalies)</td><td>Lineup Experts</td><td>—</td><td>Oct 2025</td><td>—</td></tr>
+            <tr><td>Hockey (Goalies)</td><td>ErockThud</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Hockey (Goalies)</td><td>RankKing</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+            <tr><td>Hockey (Goalies)</td><td>Haxboy</td><td>—</td><td>Mar 2026</td><td>—</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
