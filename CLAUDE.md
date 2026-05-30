@@ -48,22 +48,22 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 
 ## Source Columns Per Sport
 
-**Baseball** (7 sources, 672 players, 530 with multi-source averages):
-- `FantraxHQ_Roto (Wes Hughes, 2026-02-23)` — 400 players
-- `HarryKnowsBall (Crowdsourced, 2026-03-03)` — 489 players
-- `The Athletic (Chris Welsh, 2026-02-27)` — 400 players
-- `RotoWorld (Eric Cross, 2026-01-15)` — 200 players
-- `FantasyPros (FantasyPros, 2026-03-03)` — 300 players
-- `Baseball America (Feb 2026)` — 500 players
+**Baseball** (7 sources, 681 players, 479 with multi-source averages):
+- `FantraxHQ_Roto (Wes Hughes, Feb 2026)` — 400 players
+- `HarryKnowsBall (Crowdsourced, May 2026)` — 393 players
+- `The Athletic (Chris Welsh, Feb 2026)` — 400 players
+- `RotoWorld (Eric Cross, May 2026)` — 200 players
+- `FantasyPros (FantasyPros, Mar 2026)` — 300 players
+- `Baseball America (May 2026)` — 393 players (400-entry list with 7 draft pick slots skipped)
 - `Owen FBB Invitational (Startup, Feb 2026)` — 499 players (overall pick number as rank)
 
-**Football** (6 sources, 313 players, 258 with multi-source averages):
-- `PFF (Nathan Jahnke, 2026-02)` — 200 players
-- `KeepTradeCut (Crowdsourced, 2026-03)` — 227 players (cut off at rank 250)
-- `FantasyPros (FantasyPros, 2026-03)` — 250 players
-- `DraftSharks (DraftSharks, 2026-03)` — 200 players
-- `Dynasty League Football (Crowdsourced, 2026-02-04)` — 250 players
-- `FantasyCalc (Crowdsourced, 2026-03)` — 250 players
+**Football** (6 sources, 317 players, 238 with multi-source averages):
+- `PFF (Nathan Jahnke, Feb 2026)` — 200 players
+- `KeepTradeCut (Crowdsourced, May 2026)` — 181 players (200-slot list with 19 draft pick slots skipped)
+- `FantasyPros (FantasyPros, May 2026)` — 200 players
+- `DraftSharks (DraftSharks, May 2026)` — 200 players
+- `Dynasty League Football (Crowdsourced, Feb 2026)` — 250 players
+- `Dynatyze (Crowdsourced, May 2026)` — 199 players
 
 **Basketball** (5 sources, 316 players, 273 with multi-source averages):
 - `Dizzle Dynasty (Cat, Mar 2026)` — category leagues, 213 players (may be truncated)
@@ -141,7 +141,7 @@ Common name mismatches to watch for across football sources:
 - "James Cook III" (canonical) vs "James Cook" (DraftSharks/KTC)
 - "Travis Etienne Jr." (canonical) vs "Travis Etienne" (DraftSharks)
 - "Cam Skattebo" (canonical) vs "Cameron Skattebo" (DraftSharks)
-- "Chigoziem Okonkwo" (canonical) vs "Chig Okonkwo" (FantasyPros/DLF)
+- "Chigoziem Okonkwo" (canonical) vs "Chig Okonkwo" (FantasyPros/DLF/Dynatyze)
 
 ## Website (GitHub Pages)
 The data is published as a static site at the repo's GitHub Pages URL. The entry point is `index.html` in the root.
@@ -158,8 +158,8 @@ The data is published as a static site at the repo's GitHub Pages URL. The entry
 - **Weight controls panel**: a `<div class="weights-panel">` is injected above each table (outside DataTables entirely) with a labeled number input per source (default 1). Changing a weight triggers a debounced (400ms) recompute: reads all weights, builds new data arrays from `originalData` (immutable CSV snapshot), computes `Σ rank×weight / Σ weight` per player (skipping blank ranks), then reloads DataTables via `dt.clear().rows.add(newData).draw(false)`. Weights are session-only (reset on refresh). Keeping controls outside the DataTables `<thead>` is critical — DataTables manipulates the thead during draws and would interfere with in-thead inputs.
 
 ## Football-Specific Notes
-- Age data source: FantasyCalc (Mar 2026) — stored as decimal (e.g. 24.1); blank for rookies
-- Merge script for new football sources: `scripts/merge_fantasycalc_football.py` (use as template)
+- Age data source: FantasyCalc (originally Mar 2026) — stored as decimal (e.g. 24.1); blank for rookies
+- Merge script for new football sources: `scripts/merge_dynatyze_football.py` (use as template)
 - When adding a new football source, also backfill Age if the source provides it and the player's Age is currently blank
 
 ## Hockey-Specific Notes
