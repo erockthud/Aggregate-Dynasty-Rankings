@@ -88,6 +88,15 @@
     /* Rank Variance — cell background shading applied via JS */
     table.dataTable td.col-variance { text-align: center; font-weight: 600; }
 
+    /* Source column date subtitle */
+    table.dataTable th .col-date {
+      display: block;
+      font-size: 0.72em;
+      font-weight: 400;
+      color: #888;
+      margin-top: 1px;
+    }
+
     /* Weight controls panel */
     .weights-panel {
       display: flex;
@@ -212,11 +221,11 @@
           </thead>
           <tbody>
             <tr><td>Baseball</td><td>FantraxHQ_Roto</td><td>Wes Hughes</td><td>2026-02-23</td><td>—</td></tr>
-            <tr><td>Baseball</td><td>HarryKnowsBall</td><td>Crowdsourced</td><td>2026-03-03</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>HarryKnowsBall</td><td>Crowdsourced</td><td>2026-05-29</td><td>—</td></tr>
             <tr><td>Baseball</td><td>The Athletic</td><td>Chris Welsh</td><td>2026-02-27</td><td>—</td></tr>
-            <tr><td>Baseball</td><td>RotoWorld</td><td>Eric Cross</td><td>2026-01-15</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>RotoWorld</td><td>Eric Cross</td><td>2026-05-29</td><td>—</td></tr>
             <tr><td>Baseball</td><td>FantasyPros</td><td>FantasyPros</td><td>2026-03-03</td><td>—</td></tr>
-            <tr><td>Baseball</td><td>Baseball America</td><td>—</td><td>Feb 2026</td><td>—</td></tr>
+            <tr><td>Baseball</td><td>Baseball America</td><td>—</td><td>Apr 2026</td><td>—</td></tr>
             <tr><td>Baseball</td><td>Owen FBB Invitational</td><td>—</td><td>Feb 2026</td><td>—</td></tr>
             <tr><td>Football</td><td>PFF</td><td>Nathan Jahnke</td><td>Feb 2026</td><td>—</td></tr>
             <tr><td>Football</td><td>KeepTradeCut</td><td>Crowdsourced</td><td>Mar 2026</td><td>—</td></tr>
@@ -282,6 +291,18 @@
     return i > 0 ? field.substring(0, i).trim() : field;
   }
 
+  const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function dateLabel(field) {
+    const m = field.match(/\(([^)]+)\)/);
+    if (!m) return '';
+    const parts = m[1].split(',');
+    const last = parts[parts.length - 1].trim();
+    // ISO format YYYY-MM-DD → Mon YYYY
+    const iso = last.match(/^(\d{4})-(\d{2})-\d{2}$/);
+    if (iso) return MONTHS[parseInt(iso[2], 10) - 1] + ' ' + iso[1];
+    return last;
+  }
+
   // Return a cell background color on a green→yellow→red gradient (0 = best, 0.5+ = worst)
   function varianceBg(val) {
     const v = Math.min(Math.max(parseFloat(val) || 0, 0), 0.5);
@@ -336,7 +357,10 @@
       else if (isVariance) className = 'col-variance';
       else if (isSource)   className = 'col-source';
 
-      const titleHtml = isSource ? shortName(field) : field;
+      const date = isSource ? dateLabel(field) : '';
+      const titleHtml = isSource
+        ? `${shortName(field)}<span class="col-date">${date}</span>`
+        : field;
 
       const colDef = {
         title: titleHtml,
