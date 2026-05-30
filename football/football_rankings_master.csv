@@ -1,266 +1,266 @@
-Player,Position,Team,Age,Level,ETA,"PFF (Nathan Jahnke, 2026-02)","KeepTradeCut (Crowdsourced, 2026-05)","FantasyPros (FantasyPros, 2026-03)","DraftSharks (DraftSharks, 2026-03)","Dynasty League Football (Crowdsourced, 2026-02-04)","FantasyCalc (Crowdsourced, 2026-03)",Average Rank,Rank Variance
+Player,Position,Team,Age,Level,ETA,"PFF (Nathan Jahnke, 2026-02)","KeepTradeCut (Crowdsourced, 2026-05)","FantasyPros (FantasyPros, 2026-05)","DraftSharks (DraftSharks, 2026-03)","Dynasty League Football (Crowdsourced, 2026-02-04)","FantasyCalc (Crowdsourced, 2026-03)",Average Rank,Rank Variance
 Josh Allen,QB,Bills,29.8,,,1,2,1,1,1,2,1.3333,0.0815
 Drake Maye,QB,Patriots,23.5,,,2,6,2,2,4,7,3.8333,0.2523
-Joe Burrow,QB,Bengals,29.2,,,3,18,6,5,10,16,9.6667,0.4196
-Jalen Hurts,QB,Eagles,27.5,,,4,29,11,13,7,25,14.8333,0.5046
-Jaxon Smith-Njigba,WR,Seahawks,24.0,,,5,4,9,11,5,4,6.3333,0.2598
+Joe Burrow,QB,Bengals,29.2,,,3,18,7,5,10,16,9.8333,0.4077
+Jalen Hurts,QB,Eagles,27.5,,,4,29,15,13,7,25,15.5,0.4797
+Jaxon Smith-Njigba,WR,Seahawks,24.0,,,5,4,6,11,5,4,5.8333,0.2436
 Puka Nacua,WR,Rams,24.7,,,6,7,8,12,6,5,7.3333,0.203
-Bijan Robinson,RB,Falcons,24.1,,,7,1,13,6,13,1,6.8333,0.4548
-Jahmyr Gibbs,RB,Lions,23.9,,,8,5,14,10,12,6,9.1667,0.2462
-Ja'Marr Chase,WR,Bengals,26.0,,,9,3,5,8,3,3,5.1667,0.267
-Brock Bowers,TE,Raiders,23.2,,,10,8,35,38,20,10,20.1667,0.531
-Trey McBride,TE,Cardinals,26.2,,,11,17,38,39,18,15,23.0,0.4374
-Drake London,WR,Falcons,24.6,,,12,22,25,25,21,22,21.1667,0.1831
-Lamar Jackson,QB,Ravens,29.1,,,13,13,4,4,2,9,7.5,0.3878
-De'Von Achane,RB,Dolphins,24.4,,,14,21,24,24,25,21,21.5,0.1524
-Malik Nabers,WR,Giants,22.6,,,15,14,21,20,15,11,16.0,0.1807
-Amon-Ra St. Brown,WR,Lions,26.3,,,16,11,18,21,9,12,14.5,0.2356
-Jeremiyah Love,RB,Rookie,,,,17,15,34,15,,19,20.0,0.32
+Bijan Robinson,RB,Falcons,24.1,,,7,1,11,6,13,1,6.5,0.4322
+Jahmyr Gibbs,RB,Lions,23.9,,,8,5,12,10,12,6,8.8333,0.2165
+Ja'Marr Chase,WR,Bengals,26.0,,,9,3,4,8,3,3,5.0,0.2757
+Brock Bowers,TE,Raiders,23.2,,,10,8,29,38,20,10,19.1667,0.505
+Trey McBride,TE,Cardinals,26.2,,,11,17,36,39,18,15,22.6667,0.4256
+Drake London,WR,Falcons,24.6,,,12,22,23,25,21,22,20.8333,0.1756
+Lamar Jackson,QB,Ravens,29.1,,,13,13,5,4,2,9,7.6667,0.3725
+De'Von Achane,RB,Dolphins,24.4,,,14,21,26,24,25,21,21.8333,0.1623
+Malik Nabers,WR,Giants,22.6,,,15,14,18,20,15,11,15.5,0.1535
+Amon-Ra St. Brown,WR,Lions,26.3,,,16,11,17,21,9,12,14.3333,0.2305
+Jeremiyah Love,RB,Rookie,,,,17,15,22,15,,19,17.6,0.1313
 CeeDee Lamb,WR,Cowboys,26.9,,,18,19,16,18,8,17,16.0,0.1928
-Ashton Jeanty,RB,Raiders,22.2,,,19,16,23,19,26,18,20.1667,0.1453
-Jaxson Dart,QB,Giants,22.8,,,20,26,15,29,22,26,23.0,0.1807
+Ashton Jeanty,RB,Raiders,22.2,,,19,16,19,19,26,18,19.5,0.1384
+Jaxson Dart,QB,Giants,22.8,,,20,26,21,29,22,26,24.0,0.1214
 Jayden Daniels,QB,Commanders,25.2,,,21,10,3,3,11,8,9.3333,0.4642
-Carnell Tate,WR,Rookie,,,,22,35,47,56,,37,39.4,0.2896
-Jordyn Tyson,WR,Rookie,,,,23,52,67,66,,51,51.8,0.3128
-Justin Jefferson,WR,Vikings,26.7,,,24,12,17,17,14,13,16.1667,0.2058
-Brock Purdy,QB,49ers,26.1,,,25,37,19,28,37,32,29.6667,0.2045
-Omarion Hampton,RB,Chargers,22.9,,,26,24,27,23,34,23,26.1667,0.1337
-Rashee Rice,WR,Chiefs,25.8,,,27,87,43,37,45,53,48.6667,0.3854
-George Pickens,WR,Free Agent,25.0,,,28,36,33,34,33,34,33.0,0.0706
-Tetairoa McMillan,WR,Panthers,22.9,,,29,27,31,35,30,28,30.0,0.0808
-Patrick Mahomes,QB,Chiefs,30.4,,,30,25,7,7,16,24,18.1667,0.4207
-Nico Collins,WR,Texans,26.9,,,31,44,28,26,24,36,31.5,0.2034
-Jonathan Taylor,RB,Colts,27.1,,,32,33,30,16,32,27,28.3333,0.1922
-Trevor Lawrence,QB,Jaguars,26.4,,,33,28,22,22,23,33,26.8333,0.1655
-Caleb Williams,QB,Bears,24.3,,,34,9,10,9,19,14,15.8333,0.4658
-James Cook III,RB,Bills,26.4,,,35,34,29,32,41,29,33.3333,0.1174
-Makai Lemon,WR,Rookie,,,,36,56,54,55,,35,47.2,0.2052
-Ladd McConkey,WR,Chargers,24.3,,,37,51,39,53,38,46,44.0,0.1426
-Bucky Irving,RB,Buccaneers,23.5,,,38,70,48,40,49,43,48.0,0.2191
-Justin Herbert,QB,Chargers,27.9,,,39,23,12,14,17,20,20.8333,0.3772
-Kyren Williams,RB,Rams,25.5,,,40,73,74,68,60,61,62.6667,0.1854
-Bo Nix,QB,Broncos,26.0,,,41,32,20,33,28,30,30.6667,0.1924
-Dak Prescott,QB,Cowboys,32.6,,,42,62,32,41,36,44,42.8333,0.2166
-Chris Olave,WR,Saints,25.6,,,43,46,37,49,54,47,46.0,0.1123
-TreVeyon Henderson,RB,Patriots,23.3,,,44,53,50,27,64,49,47.8333,0.2307
-Jordan Love,QB,Packers,27.3,,,45,43,26,31,27,41,35.5,0.2094
-Chase Brown,RB,Bengals,25.9,,,46,60,61,64,61,52,57.3333,0.1101
-Garrett Wilson,WR,Jets,25.6,,,47,39,36,58,31,38,41.5,0.2066
-Jameson Williams,WR,Lions,24.9,,,48,79,56,54,72,73,63.6667,0.183
-Baker Mayfield,QB,Buccaneers,30.9,,,49,75,41,52,40,59,52.6667,0.226
-Tyler Warren,TE,Colts,23.7,,,50,38,63,67,46,40,50.6667,0.2149
-Tee Higgins,WR,Bengals,27.1,,,51,63,44,50,53,66,54.5,0.1405
-Denzel Boston,WR,Rookie,,,,52,122,108,88,,77,89.4,0.2883
-Brian Thomas Jr.,WR,Jaguars,23.4,,,53,69,52,72,44,58,58.0,0.1701
-Harold Fannin Jr.,TE,Browns,21.6,,,54,66,70,70,107,64,71.8333,0.2369
-Quinshon Judkins,RB,Browns,22.3,,,55,45,73,43,55,54,54.1667,0.1796
-Jared Goff,QB,Lions,31.4,,,56,78,49,57,51,70,60.1667,0.1751
-Fernando Mendoza,QB,Rookie,,,,57,42,58,30,,42,45.8,0.2314
-R.J. Harvey,RB,Broncos,25.0,,,58,121,77,77,74,91,83.0,0.243
-Saquon Barkley,RB,Eagles,29.0,,,59,65,62,48,48,55,56.1667,0.1167
-Breece Hall,RB,Free Agent,24.7,,,60,50,46,42,35,48,46.8333,0.1611
-Colston Loveland,TE,Bears,21.9,,,61,30,60,59,52,31,48.8333,0.2703
-Cam Skattebo,RB,Giants,24.0,,,62,77,82,76,79,81,76.1667,0.09
-DeVonta Smith,WR,Eagles,27.3,,,63,55,53,65,43,72,58.5,0.1618
-Christian McCaffrey,RB,49ers,29.7,,,64,58,64,46,56,45,55.5,0.1386
+Carnell Tate,WR,Rookie,,,,22,35,40,56,,37,38.0,0.2834
+Jordyn Tyson,WR,Rookie,,,,23,52,46,66,,51,47.6,0.2972
+Justin Jefferson,WR,Vikings,26.7,,,24,12,14,17,14,13,15.6667,0.2135
+Brock Purdy,QB,49ers,26.1,,,25,37,24,28,37,32,30.5,0.1621
+Omarion Hampton,RB,Chargers,22.9,,,26,24,28,23,34,23,26.3333,0.1349
+Rashee Rice,WR,Chiefs,25.8,,,27,87,44,37,45,53,48.8333,0.3833
+George Pickens,WR,Free Agent,25.0,,,28,36,34,34,33,34,33.1667,0.0711
+Tetairoa McMillan,WR,Panthers,22.9,,,29,27,27,35,30,28,29.3333,0.0877
+Patrick Mahomes,QB,Chiefs,30.4,,,30,25,10,7,16,24,18.6667,0.3851
+Nico Collins,WR,Texans,26.9,,,31,44,31,26,24,36,32.0,0.1956
+Jonathan Taylor,RB,Colts,27.1,,,32,33,32,16,32,27,28.6667,0.1949
+Trevor Lawrence,QB,Jaguars,26.4,,,33,28,20,22,23,33,26.5,0.1804
+Caleb Williams,QB,Bears,24.3,,,34,9,9,9,19,14,15.6667,0.4757
+James Cook III,RB,Bills,26.4,,,35,34,30,32,41,29,33.5,0.1123
+Makai Lemon,WR,Rookie,,,,36,56,50,55,,35,46.4,0.1987
+Ladd McConkey,WR,Chargers,24.3,,,37,51,42,53,38,46,44.5,0.1345
+Bucky Irving,RB,Buccaneers,23.5,,,38,70,72,40,49,43,52.0,0.2665
+Justin Herbert,QB,Chargers,27.9,,,39,23,13,14,17,20,21.0,0.3681
+Kyren Williams,RB,Rams,25.5,,,40,73,76,68,60,61,63.0,0.1902
+Bo Nix,QB,Broncos,26.0,,,41,32,25,33,28,30,31.5,0.1498
+Dak Prescott,QB,Cowboys,32.6,,,42,62,37,41,36,44,43.6667,0.1948
+Chris Olave,WR,Saints,25.6,,,43,46,38,49,54,47,46.1667,0.1059
+TreVeyon Henderson,RB,Patriots,23.3,,,44,53,59,27,64,49,49.3333,0.2399
+Jordan Love,QB,Packers,27.3,,,45,43,33,31,27,41,36.6667,0.1755
+Chase Brown,RB,Bengals,25.9,,,46,60,55,64,61,52,56.3333,0.1085
+Garrett Wilson,WR,Jets,25.6,,,47,39,39,58,31,38,42.0,0.1987
+Jameson Williams,WR,Lions,24.9,,,48,79,68,54,72,73,65.6667,0.1704
+Baker Mayfield,QB,Buccaneers,30.9,,,49,75,53,52,40,59,54.6667,0.1968
+Tyler Warren,TE,Colts,23.7,,,50,38,57,67,46,40,49.6667,0.1999
+Tee Higgins,WR,Bengals,27.1,,,51,63,51,50,53,66,55.6667,0.115
+Denzel Boston,WR,Rookie,,,,52,122,105,88,,77,88.8,0.285
+Brian Thomas Jr.,WR,Jaguars,23.4,,,53,69,69,72,44,58,60.8333,0.1679
+Harold Fannin Jr.,TE,Browns,21.6,,,54,66,67,70,107,64,71.3333,0.2398
+Quinshon Judkins,RB,Browns,22.3,,,55,45,70,43,55,54,53.6667,0.1634
+Jared Goff,QB,Lions,31.4,,,56,78,60,57,51,70,62.0,0.1501
+Fernando Mendoza,QB,Rookie,,,,57,42,52,30,,42,44.6,0.2103
+R.J. Harvey,RB,Broncos,25.0,,,58,121,111,77,74,91,88.6667,0.2545
+Saquon Barkley,RB,Eagles,29.0,,,59,65,65,48,48,55,56.6667,0.1251
+Breece Hall,RB,Free Agent,24.7,,,60,50,43,42,35,48,46.3333,0.1656
+Colston Loveland,TE,Bears,21.9,,,61,30,48,59,52,31,46.8333,0.2604
+Cam Skattebo,RB,Giants,24.0,,,62,77,81,76,79,81,76.0,0.0883
+DeVonta Smith,WR,Eagles,27.3,,,63,55,47,65,43,72,57.5,0.1787
+Christian McCaffrey,RB,49ers,29.7,,,64,58,62,46,56,45,55.1667,0.1331
 A.J. Brown,WR,Eagles,28.6,,,65,72,45,47,39,65,55.5,0.2227
-Zay Flowers,WR,Ravens,25.4,,,66,76,51,51,65,68,62.8333,0.1467
-Sam LaPorta,TE,Lions,25.1,,,67,83,72,149,58,67,82.6667,0.3822
-Matthew Stafford,QB,Rams,38.0,,,68,105,90,78,99,90,88.3333,0.1451
-C.J. Stroud,QB,Texans,24.4,,,69,67,42,45,47,63,55.5,0.2005
-Jaylen Waddle,WR,Dolphins,27.2,,,70,74,65,61,57,86,68.8333,0.1406
-Emeka Egbuka,WR,Buccaneers,23.3,,,71,31,40,44,29,39,42.3333,0.32
-Josh Jacobs,RB,Packers,28.0,,,72,114,76,36,68,76,73.6667,0.3161
-KC Concepcion,WR,Rookie,,,,73,86,94,89,,83,85.0,0.0871
-Kenneth Walker III,RB,Free Agent,25.3,,,74,49,71,62,62,60,63.0,0.1302
-Marvin Harrison Jr.,WR,Cardinals,23.5,,,75,57,59,74,42,57,60.6667,0.1879
-Bryce Young,QB,Panthers,24.6,,,76,88,85,75,78,84,81.0,0.0624
-Cam Ward,QB,Titans,23.7,,,77,48,66,71,67,50,63.1667,0.1709
-Sam Darnold,QB,Seahawks,28.7,,,78,80,68,69,70,71,72.6667,0.065
-J.J. McCarthy,QB,Vikings,23.1,,,79,164,121,82,93,112,108.5,0.2803
-Javonte Williams,RB,Cowboys,25.8,,,80,81,87,97,102,78,87.5,0.107
-Rome Odunze,WR,Bears,23.7,,,81,47,55,84,50,56,62.1667,0.24
-Kyle Pitts Sr.,TE,Free Agent,25.4,,,82,89,75,115,77,80,86.3333,0.1626
-Travis Etienne Jr.,RB,Free Agent,27.1,,,83,85,81,103,73,82,84.5,0.1112
-Tucker Kraft,TE,Packers,25.3,,,84,68,69,80,66,69,72.6667,0.0955
-Luther Burden III,WR,Bears,22.2,,,85,54,57,79,84,62,70.1667,0.1873
-D.K. Metcalf,WR,Steelers,28.2,,,86,116,83,91,59,108,90.5,0.2108
-Ty Simpson,QB,Rookie,,,,87,107,133,86,,113,105.2,0.1779
-Jonah Coleman,RB,Rookie,,,,88,147,156,132,,79,120.4,0.2783
-Tyler Shough,QB,Saints,26.4,,,89,64,79,60,108,74,79.0,0.2097
-Jordan Addison,WR,Vikings,24.1,,,90,94,78,93,69,94,86.3333,0.1143
-Kenyon Sadiq,TE,Rookie,,,,91,90,95,106,,75,91.4,0.1157
-Shedeur Sanders,QB,Browns,24.0,,,92,177,174,108,165,127,140.5,0.2506
-Michael Penix Jr.,QB,Falcons,25.8,,,93,146,98,90,97,102,104.3333,0.1905
-D'Andre Swift,RB,Bears,27.1,,,94,113,105,112,92,104,103.3333,0.0812
-Daniel Jones,QB,Free Agent,28.7,,,95,95,100,87,98,89,94.0,0.0511
-Ricky Pearsall,WR,49ers,25.4,,,96,119,84,81,104,97,96.8333,0.136
-Jaylen Warren,RB,Steelers,27.3,,,97,144,116,123,114,125,119.8333,0.1236
-Kyler Murray,QB,Cardinals,28.5,,,98,93,80,63,63,85,80.3333,0.1734
-Oronde Gadsden,TE,Chargers,22.7,,,99,109,88,,100,93,97.8,0.077
-Zach Charbonnet,RB,Seahawks,25.1,,,100,124,124,130,103,128,118.1667,0.1068
-Derrick Henry,RB,Ravens,32.1,,,101,96,91,85,76,87,89.3333,0.0931
-Michael Wilson,WR,Cardinals,26.0,,,102,110,103,122,148,101,114.3333,0.1531
-Jadarian Price,RB,Rookie,,,,103,71,171,102,,92,107.8,0.3333
-Terry McLaurin,WR,Commanders,30.4,,,104,118,92,92,83,103,98.6667,0.1186
-Christian Watson,WR,Packers,26.8,,,105,102,86,94,121,119,104.5,0.1253
-Rico Dowdle,RB,Free Agent,27.7,,,106,140,137,156,133,139,135.1667,0.1164
+Zay Flowers,WR,Ravens,25.4,,,66,76,56,51,65,68,63.6667,0.1298
+Sam LaPorta,TE,Lions,25.1,,,67,83,71,149,58,67,82.5,0.3837
+Matthew Stafford,QB,Rams,38.0,,,68,105,104,78,99,90,90.6667,0.157
+C.J. Stroud,QB,Texans,24.4,,,69,67,58,45,47,63,58.1667,0.161
+Jaylen Waddle,WR,Dolphins,27.2,,,70,74,61,61,57,86,68.1667,0.1476
+Emeka Egbuka,WR,Buccaneers,23.3,,,71,31,35,44,29,39,41.5,0.332
+Josh Jacobs,RB,Packers,28.0,,,72,114,83,36,68,76,74.8333,0.3151
+KC Concepcion,WR,Rookie,,,,73,86,78,89,,83,81.8,0.0735
+Kenneth Walker III,RB,Free Agent,25.3,,,74,49,41,62,62,60,58.0,0.1826
+Marvin Harrison Jr.,WR,Cardinals,23.5,,,75,57,63,74,42,57,61.3333,0.186
+Bryce Young,QB,Panthers,24.6,,,76,88,93,75,78,84,82.3333,0.0828
+Cam Ward,QB,Titans,23.7,,,77,48,64,71,67,50,62.8333,0.1708
+Sam Darnold,QB,Seahawks,28.7,,,78,80,80,69,70,71,74.6667,0.0653
+J.J. McCarthy,QB,Vikings,23.1,,,79,164,143,82,93,112,112.1667,0.296
+Javonte Williams,RB,Cowboys,25.8,,,80,81,79,97,102,78,86.1667,0.1151
+Rome Odunze,WR,Bears,23.7,,,81,47,54,84,50,56,62.0,0.242
+Kyle Pitts,TE,Free Agent,25.4,,,82,89,77,115,77,80,86.6667,0.1589
+Travis Etienne Jr.,RB,Free Agent,27.1,,,83,85,74,103,73,82,83.3333,0.1225
+Tucker Kraft,TE,Packers,25.3,,,84,68,66,80,66,69,72.1667,0.1012
+Luther Burden III,WR,Bears,22.2,,,85,54,49,79,84,62,68.8333,0.2146
+D.K. Metcalf,WR,Steelers,28.2,,,86,116,92,91,59,108,92.0,0.204
+Ty Simpson,QB,Rookie,,,,87,107,100,86,,113,98.6,0.1155
+Jonah Coleman,RB,Rookie,,,,88,147,135,132,,79,116.2,0.252
+Tyler Shough,QB,Saints,26.4,,,89,64,73,60,108,74,78.0,0.2143
+Jordan Addison,WR,Vikings,24.1,,,90,94,87,93,69,94,87.8333,0.1036
+Kenyon Sadiq,TE,Rookie,,,,91,90,85,106,,75,89.4,0.1191
+Shedeur Sanders,QB,Browns,24.0,,,92,177,,108,165,127,133.8,0.2622
+Michael Penix Jr.,QB,Falcons,25.8,,,93,146,132,90,97,102,110.0,0.2021
+D'Andre Swift,RB,Bears,27.1,,,94,113,103,112,92,104,103.0,0.0811
+Daniel Jones,QB,Free Agent,28.7,,,95,95,90,87,98,89,92.3333,0.0439
+Ricky Pearsall,WR,49ers,25.4,,,96,119,99,81,104,97,99.3333,0.1183
+Jaylen Warren,RB,Steelers,27.3,,,97,144,127,123,114,125,121.6667,0.1227
+Kyler Murray,QB,Cardinals,28.5,,,98,93,75,63,63,85,79.5,0.1771
+Oronde Gadsden,TE,Chargers,22.7,,,99,109,101,,100,93,100.4,0.0543
+Zach Charbonnet,RB,Seahawks,25.1,,,100,124,126,130,103,128,118.5,0.1081
+Derrick Henry,RB,Ravens,32.1,,,101,96,94,85,76,87,89.8333,0.0946
+Michael Wilson,WR,Cardinals,26.0,,,102,110,97,122,148,101,113.3333,0.1619
+Jadarian Price,RB,Rookie,,,,103,71,82,102,,92,90.0,0.1434
+Terry McLaurin,WR,Commanders,30.4,,,104,118,91,92,83,103,98.5,0.1199
+Christian Watson,WR,Packers,26.8,,,105,102,88,94,121,119,104.8333,0.1202
+Rico Dowdle,RB,Free Agent,27.7,,,106,140,138,156,133,139,135.3333,0.1165
 Wan'Dale Robinson,WR,Free Agent,25.1,,,107,112,109,120,136,109,115.5,0.0916
-Tyler Allgeier,RB,Free Agent,25.8,,,108,179,148,133,157,123,141.3333,0.1736
-Courtland Sutton,WR,Broncos,30.4,,,109,145,96,99,90,124,110.5,0.179
-George Kittle,TE,49ers,32.4,,,110,138,112,,89,107,111.2,0.151
-Michael Pittman Jr.,WR,Colts,28.4,,,111,128,97,95,85,117,105.5,0.1443
-Woody Marks,RB,Texans,25.1,,,112,168,138,111,128,175,138.6667,0.1912
-Chuba Hubbard,RB,Panthers,26.7,,,113,131,141,144,135,134,133.0,0.079
-Dalton Kincaid,TE,Bills,26.3,,,114,137,89,,94,105,107.8,0.1684
-Jauan Jennings,WR,Free Agent,28.6,,,115,183,119,113,122,165,136.1667,0.2126
+Tyler Allgeier,RB,Free Agent,25.8,,,108,179,158,133,157,123,143.0,0.1773
+Courtland Sutton,WR,Broncos,30.4,,,109,145,106,99,90,124,112.1667,0.1677
+George Kittle,TE,49ers,32.4,,,110,138,118,,89,107,112.4,0.1517
+Michael Pittman Jr.,WR,Colts,28.4,,,111,128,115,95,85,117,108.5,0.1385
+Woody Marks,RB,Texans,25.1,,,112,168,155,111,128,175,141.5,0.1928
+Chuba Hubbard,RB,Panthers,26.7,,,113,131,133,144,135,134,131.6667,0.0746
+Dalton Kincaid,TE,Bills,26.3,,,114,137,112,,94,105,112.4,0.1348
+Jauan Jennings,WR,Free Agent,28.6,,,115,183,145,113,122,165,140.5,0.1986
 Jacoby Brissett,QB,Cardinals,33.2,,,116,185,,,,220,173.6667,0.2962
-Chris Bell,WR,Rookie,,,,117,151,212,137,,142,151.8,0.2289
-Anthony Richardson Sr.,QB,Colts,23.7,,,118,,227,,192,136,168.25,0.2901
-Blake Corum,RB,Rams,25.2,,,119,135,132,127,156,149,136.3333,0.0978
-D.J. Moore,WR,Bears,28.9,,,120,104,107,114,81,88,102.3333,0.1403
-Emmett Johnson,RB,Rookie,,,,121,,186,138,,100,136.25,0.2593
-Davante Adams,WR,Rams,33.2,,,122,132,99,101,71,98,103.8333,0.1956
-Jake Ferguson,TE,Cowboys,27.1,,,123,139,104,,126,118,122.0,0.1001
-Kyle Monangai,RB,Bears,23.7,,,124,108,118,124,150,129,125.5,0.1073
-Malik Willis,QB,Free Agent,26.7,,,125,98,125,73,163,96,113.3333,0.2646
-David Montgomery,RB,Lions,28.7,,,126,125,144,146,117,110,128.0,0.1083
-Trey Benson,RB,Cardinals,23.6,,,127,,139,121,101,133,124.2,0.113
-Xavier Worthy,WR,Chiefs,22.8,,,128,129,93,96,87,120,108.8333,0.1663
-Mark Andrews,TE,Ravens,30.5,,,129,175,153,,88,177,144.4,0.248
-Brenton Strange,TE,Jaguars,25.1,,,130,150,113,,,132,131.25,0.111
-Alec Pierce,WR,Free Agent,25.8,,,131,92,110,118,145,99,115.8333,0.1643
-Jayden Reed,WR,Packers,25.8,,,132,120,117,110,86,154,119.8333,0.1814
-Parker Washington,WR,Jaguars,23.9,,,133,115,135,153,142,114,132.0,0.1114
-Elijah Sarratt,WR,Rookie,,,,134,171,196,141,,130,154.4,0.1774
-Kenneth Gainwell,RB,Free Agent,26.9,,,135,166,167,155,200,152,162.5,0.1297
-Germie Bernard,WR,Rookie,,,,136,159,197,151,,151,158.8,0.1399
-Dallas Goedert,TE,Free Agent,31.1,,,137,,130,,130,198,148.75,0.2146
-Travis Hunter,WR,Jaguars,22.8,,,138,123,106,83,82,95,104.5,0.2052
-Khalil Shakir,WR,Bills,26.0,,,139,152,115,119,171,143,139.8333,0.1442
-Bhayshul Tuten,RB,Jaguars,24.0,,,140,100,126,116,143,121,124.3333,0.1232
-Tyjae Spears,RB,Titans,24.7,,,141,199,170,157,132,192,165.1667,0.1585
-Matthew Golden,WR,Packers,22.6,,,142,106,127,125,96,111,117.8333,0.1354
-Nicholas Singleton,RB,Rookie,,,,143,160,205,169,,122,159.8,0.188
-Jayden Higgins,WR,Texans,23.2,,,144,126,101,98,109,115,115.5,0.1428
-Jordan Mason,RB,Vikings,26.7,,,145,194,183,135,164,185,167.6667,0.1376
-Tua Tagovailoa,QB,Dolphins,28.0,,,146,178,169,107,112,146,143.0,0.1953
-Quentin Johnston,WR,Chargers,24.5,,,147,130,111,117,124,126,125.8333,0.0947
-Deebo Samuel,WR,Free Agent,30.1,,,148,,142,147,91,187,143.0,0.2312
-Mac Jones,QB,49ers,27.5,,,149,193,200,,241,140,184.6,0.2166
-Jakobi Meyers,WR,Jaguars,29.3,,,150,148,102,129,118,135,130.3333,0.1353
-Rhamondre Stevenson,RB,Patriots,28.0,,,151,162,134,131,120,145,140.5,0.104
-Jacory Croskey-Merritt,RB,Commanders,24.9,,,152,161,160,159,134,159,154.1667,0.0652
-Hunter Henry,TE,Patriots,31.2,,,153,,164,,210,229,189.0,0.1873
-Chris Brazzell II,WR,Rookie,,,,154,195,192,142,,147,166.0,0.149
-Justin Fields,QB,Jets,,,,155,,248,154,149,,176.5,0.263
-Braelon Allen,RB,Jets,22.1,,,156,192,210,164,160,180,177.0,0.1158
-Chris Godwin Jr.,WR,Buccaneers,30.0,,,157,157,120,105,80,155,129.0,0.243
-Alvin Kamara,RB,Saints,30.6,,,158,,181,187,113,184,164.6,0.183
-Dylan Sampson,RB,Browns,21.4,,,159,176,176,186,205,196,183.0,0.0869
-Kaytron Allen,RB,Rookie,,,,160,,234,166,,,186.6667,0.2144
-Tony Pollard,RB,Titans,28.8,,,161,173,159,143,127,176,156.5,0.1152
-Kayshon Boutte,WR,Patriots,23.8,,,162,187,168,177,184,174,175.3333,0.0525
-Mike Evans,WR,Free Agent,32.5,,,163,134,122,104,105,131,126.5,0.1665
-Brandon Aiyuk,WR,Free Agent,27.9,,,164,,114,126,75,144,124.6,0.2589
-Zachariah Branch,WR,Rookie,,,,165,189,202,140,,138,166.8,0.1668
-Demond Claiborne,RB,Rookie,,,,166,,244,,,161,190.3333,0.2383
-Josh Downs,WR,Colts,24.5,,,167,111,123,148,95,148,132.0,0.1966
-Isaiah Likely,TE,Free Agent,25.8,,,168,127,143,,146,137,144.2,0.1016
-Kimani Vidal,RB,Chargers,24.5,,,169,,218,195,216,218,203.2,0.103
-A.J. Barner,TE,Seahawks,23.8,,,170,174,165,,,168,169.25,0.0217
-Jonathon Brooks,RB,Panthers,22.6,,,171,141,225,184,208,171,183.3333,0.1583
-Tre' Harris,WR,Chargers,24.0,,,172,172,147,128,144,169,155.3333,0.1146
+Chris Bell,WR,Rookie,,,,117,151,139,137,,142,137.2,0.0879
+Anthony Richardson Sr.,QB,Colts,23.7,,,118,,,,192,136,148.6667,0.2511
+Blake Corum,RB,Rams,25.2,,,119,135,134,127,156,149,136.6667,0.0969
+D.J. Moore,WR,Bears,28.9,,,120,104,89,114,81,88,99.3333,0.1507
+Emmett Johnson,RB,Rookie,,,,121,,173,138,,100,133.0,0.2237
+Davante Adams,WR,Rams,33.2,,,122,132,107,101,71,98,105.1667,0.1922
+Jake Ferguson,TE,Cowboys,27.1,,,123,139,108,,126,118,122.8,0.0888
+Kyle Monangai,RB,Bears,23.7,,,124,108,123,124,150,129,126.3333,0.1036
+Malik Willis,QB,Free Agent,26.7,,,125,98,84,73,163,96,106.5,0.2932
+David Montgomery,RB,Lions,28.7,,,126,125,120,146,117,110,124.0,0.0949
+Trey Benson,RB,Cardinals,23.6,,,127,,,121,101,133,120.5,0.1107
+Xavier Worthy,WR,Chiefs,22.8,,,128,129,102,96,87,120,110.3333,0.1538
+Mark Andrews,TE,Ravens,30.5,,,129,175,147,,88,177,143.2,0.2483
+Brenton Strange,TE,Jaguars,25.1,,,130,150,128,,,132,135.0,0.0724
+Alec Pierce,WR,Free Agent,25.8,,,131,92,86,118,145,99,111.8333,0.2
+Jayden Reed,WR,Packers,25.8,,,132,120,122,110,86,154,120.6667,0.18
+Parker Washington,WR,Jaguars,23.9,,,133,115,117,153,142,114,129.0,0.1215
+Elijah Sarratt,WR,Rookie,,,,134,171,164,141,,130,148.0,0.1203
+Kenneth Gainwell,RB,Free Agent,26.9,,,135,166,150,155,200,152,159.6667,0.1344
+Germie Bernard,WR,Rookie,,,,136,159,141,151,,151,147.6,0.0596
+Dallas Goedert,TE,Free Agent,31.1,,,137,,146,,130,198,152.75,0.1957
+Travis Hunter,WR,Jaguars,22.8,,,138,123,129,83,82,95,108.3333,0.2174
+Khalil Shakir,WR,Bills,26.0,,,139,152,130,119,171,143,142.3333,0.1223
+Bhayshul Tuten,RB,Jaguars,24.0,,,140,100,98,116,143,121,119.6667,0.1534
+Tyjae Spears,RB,Titans,24.7,,,141,199,181,157,132,192,167.0,0.1612
+Matthew Golden,WR,Packers,22.6,,,142,106,121,125,96,111,116.8333,0.1325
+Nicholas Singleton,RB,Rookie,,,,143,160,169,169,,122,152.6,0.1277
+Jayden Higgins,WR,Texans,23.2,,,144,126,110,98,109,115,117.0,0.1316
+Jordan Mason,RB,Vikings,26.7,,,145,194,172,135,164,185,165.8333,0.1331
+Tua Tagovailoa,QB,Dolphins,28.0,,,146,178,187,107,112,146,146.0,0.2173
+Quentin Johnston,WR,Chargers,24.5,,,147,130,125,117,124,126,128.1667,0.0762
+Deebo Samuel,WR,Free Agent,30.1,,,148,,193,147,91,187,153.2,0.2579
+Mac Jones,QB,49ers,27.5,,,149,193,,,241,140,180.75,0.2496
+Jakobi Meyers,WR,Jaguars,29.3,,,150,148,116,129,118,135,132.6667,0.1051
+Rhamondre Stevenson,RB,Patriots,28.0,,,151,162,137,131,120,145,141.0,0.1022
+Jacory Croskey-Merritt,RB,Commanders,24.9,,,152,161,156,159,134,159,153.5,0.0634
+Hunter Henry,TE,Patriots,31.2,,,153,,180,,210,229,193.0,0.1689
+Chris Brazzell II,WR,Rookie,,,,154,195,165,142,,147,160.6,0.1273
+Justin Fields,QB,Jets,,,,155,,,154,149,,152.6667,0.0204
+Braelon Allen,RB,Jets,22.1,,,156,192,,164,160,180,170.4,0.0862
+Chris Godwin Jr.,WR,Buccaneers,30.0,,,157,157,124,105,80,155,129.6667,0.2405
+Alvin Kamara,RB,Saints,30.6,,,158,,,187,113,184,160.5,0.2069
+Dylan Sampson,RB,Browns,21.4,,,159,176,182,186,205,196,184.0,0.0847
+Kaytron Allen,RB,Rookie,,,,160,,190,166,,,172.0,0.0897
+Tony Pollard,RB,Titans,28.8,,,161,173,144,143,127,176,154.0,0.1208
+Kayshon Boutte,WR,Patriots,23.8,,,162,187,196,177,184,174,180.0,0.0635
+Mike Evans,WR,Free Agent,32.5,,,163,134,114,104,105,131,125.1667,0.1726
+Brandon Aiyuk,WR,Free Agent,27.9,,,164,,140,126,75,144,129.8,0.2486
+Zachariah Branch,WR,Rookie,,,,165,189,177,140,,138,161.8,0.1348
+Demond Claiborne,RB,Rookie,,,,166,,,,,161,163.5,0.021
+Josh Downs,WR,Colts,24.5,,,167,111,119,148,95,148,131.3333,0.1999
+Isaiah Likely,TE,Free Agent,25.8,,,168,127,113,,146,137,138.2,0.1444
+Kimani Vidal,RB,Chargers,24.5,,,169,,,195,216,218,199.5,0.1117
+A.J. Barner,TE,Seahawks,23.8,,,170,174,152,,,168,166.0,0.0565
+Jonathon Brooks,RB,Panthers,22.6,,,171,141,161,184,208,171,172.6667,0.1264
+Tre' Harris,WR,Chargers,24.0,,,172,172,153,128,144,169,156.3333,0.1115
 Marcus Mariota,QB,Free Agent,,,,173,,,,239,,206.0,0.2212
-Troy Franklin,WR,Broncos,23.0,,,174,191,145,145,177,153,164.1667,0.1134
-Ja'Kobi Lane,WR,Rookie,,,,175,,220,162,,172,182.25,0.1376
-Rachaad White,RB,Free Agent,27.1,,,176,181,189,181,151,160,173.0,0.0813
-Adonai Mitchell,WR,Jets,23.4,,,177,,163,152,175,200,173.4,0.1006
-J.K. Dobbins,RB,Free Agent,27.2,,,178,156,180,172,131,173,165.0,0.1099
-Chris Rodriguez Jr.,RB,Commanders,,,,179,,,,,,179.0,
-T.J. Hockenson,TE,Vikings,28.6,,,180,170,161,,106,157,154.8,0.1795
+Troy Franklin,WR,Broncos,23.0,,,174,191,189,145,177,153,171.5,0.1065
+Ja'Kobi Lane,WR,Rookie,,,,175,,188,162,,172,174.25,0.0598
+Rachaad White,RB,Free Agent,27.1,,,176,181,170,181,151,160,169.8333,0.0695
+Adonai Mitchell,WR,Jets,23.4,,,177,,195,152,175,200,179.8,0.1028
+J.K. Dobbins,RB,Free Agent,27.2,,,178,156,159,172,131,173,161.5,0.1034
+Chris Rodriguez Jr.,RB,Commanders,,,,179,,178,,,,178.5,0.0039
+T.J. Hockenson,TE,Vikings,28.6,,,180,170,166,,106,157,155.8,0.1806
 Derek Carr,QB,Free Agent,,,,181,,,,,,181.0,
-Jalen Coker,WR,Panthers,24.3,,,182,149,140,150,167,164,158.6667,0.093
-Pat Bryant,WR,Broncos,23.2,,,183,,173,139,168,167,166.0,0.0957
-Jerry Jeudy,WR,Browns,26.8,,,184,198,150,176,140,190,173.0,0.1296
-Tory Horton,WR,Seahawks,23.2,,,185,182,187,173,174,195,182.6667,0.0443
-Juwan Johnson,TE,Saints,29.4,,,186,,158,,155,201,175.0,0.1236
-Romeo Doubs,WR,Free Agent,25.9,,,187,136,146,136,152,150,151.1667,0.1206
-Tyrone Tracy Jr.,RB,Giants,26.2,,,188,190,151,160,147,178,169.0,0.1082
-Theo Johnson,TE,Giants,25.0,,,189,,152,,190,141,168.0,0.1459
+Jalen Coker,WR,Panthers,24.3,,,182,149,142,150,167,164,159.0,0.0899
+Pat Bryant,WR,Broncos,23.2,,,183,,183,139,168,167,168.0,0.1039
+Jerry Jeudy,WR,Browns,26.8,,,184,198,174,176,140,190,177.0,0.1109
+Tory Horton,WR,Seahawks,23.2,,,185,182,,173,174,195,181.8,0.0481
+Juwan Johnson,TE,Saints,29.4,,,186,,168,,155,201,177.5,0.1105
+Romeo Doubs,WR,Free Agent,25.9,,,187,136,131,136,152,150,148.6667,0.1339
+Tyrone Tracy Jr.,RB,Giants,26.2,,,188,190,160,160,147,178,170.5,0.0992
+Theo Johnson,TE,Giants,25.0,,,189,,,,190,141,173.3333,0.157
 Rashid Shaheed,WR,Free Agent,27.5,,,190,163,149,165,162,194,170.5,0.1004
-Omar Cooper Jr.,WR,Rookie,,,,191,101,157,100,,116,133.0,0.2885
-Chimere Dike,WR,Titans,24.2,,,192,,190,170,198,189,187.8,0.0547
-Tank Dell,WR,Texans,26.3,,,193,,201,,158,211,190.75,0.1177
-Mason Taylor,TE,Jets,21.8,,,194,,131,,159,163,161.75,0.1546
-Sean Tucker,RB,Buccaneers,24.3,,,195,,230,188,222,208,208.6,0.0827
-Aaron Jones Sr.,RB,Vikings,31.2,,,196,,195,191,119,232,186.6,0.2153
-Stefon Diggs,WR,Patriots,32.2,,,197,,128,109,115,186,147.0,0.2723
-Keaton Mitchell,RB,Ravens,,,,198,,238,,238,,224.6667,0.1006
+Omar Cooper Jr.,WR,Rookie,,,,191,101,96,100,,116,120.8,0.3177
+Chimere Dike,WR,Titans,24.2,,,192,,,170,198,189,187.25,0.0629
+Tank Dell,WR,Texans,26.3,,,193,,,,158,211,187.3333,0.1401
+Mason Taylor,TE,Jets,21.8,,,194,,186,,159,163,175.5,0.0949
+Sean Tucker,RB,Buccaneers,24.3,,,195,,,188,222,208,203.25,0.072
+Aaron Jones Sr.,RB,Vikings,31.2,,,196,,194,191,119,232,186.4,0.2153
+Stefon Diggs,WR,Patriots,32.2,,,197,,185,109,115,186,158.4,0.2611
+Keaton Mitchell,RB,Ravens,,,,198,,,,238,,218.0,0.1268
 Geno Smith,QB,Raiders,35.4,,,199,,,,138,234,190.3333,0.2487
-Mike Washington Jr.,RB,Rookie,,,,200,,179,134,,156,167.25,0.1657
-Jalen McMillan,WR,Buccaneers,24.2,,,,155,155,178,232,191,182.2,0.1701
-Terrance Ferguson,TE,Rams,23.0,,,,196,136,,193,162,171.75,0.1604
-Elic Ayomanor,WR,Titans,22.7,,,,200,166,163,141,199,173.8,0.1419
-Jaylin Noel,WR,Texans,23.5,,,,188,154,161,181,212,179.2,0.1251
-Isaac TeSlaa,WR,Lions,24.0,,,,169,193,167,203,193,185.0,0.0845
-Kyle Williams,WR,Patriots,23.3,,,,,175,190,185,213,190.75,0.0822
-David Njoku,TE,Browns,29.6,,,,,172,,111,158,147.0,0.2102
-Kaleb Johnson,RB,Steelers,22.5,,,,,182,185,139,181,171.75,0.1239
-Devin Neal,RB,Saints,22.5,,,,,207,183,219,202,202.75,0.0721
-Elijah Arroyo,TE,Seahawks,22.9,,,,,191,,183,247,207.0,0.1645
-Ollie Gordon,RB,Dolphins,22.1,,,,,229,180,221,224,213.5,0.1033
-Marvin Mims,WR,Broncos,,,,,,185,,182,,183.5,0.0113
-Keon Coleman,WR,Bills,22.8,,,,,178,182,123,183,166.5,0.1696
-Tre Tucker,WR,Raiders,25.0,,,,,231,192,179,242,211.0,0.1401
-Tank Bigsby,RB,Eagles,23.5,,,,,199,,187,219,201.6667,0.0782
-Jack Bech,WR,Raiders,23.2,,,,,216,194,176,216,200.5,0.0941
+Mike Washington Jr.,RB,Rookie,,,,200,,184,134,,156,168.5,0.169
+Jalen McMillan,WR,Buccaneers,24.2,,,,155,154,178,232,191,182.0,0.1714
+Terrance Ferguson,TE,Rams,23.0,,,,196,151,,193,162,175.5,0.1243
+Elic Ayomanor,WR,Titans,22.7,,,,200,,163,141,199,175.75,0.1597
+Jaylin Noel,WR,Texans,23.5,,,,188,163,161,181,212,181.0,0.1119
+Isaac TeSlaa,WR,Lions,24.0,,,,169,200,167,203,193,186.4,0.0899
+Kyle Williams,WR,Patriots,23.3,,,,,,190,185,213,196.0,0.0743
+David Njoku,TE,Browns,29.6,,,,,198,,111,158,155.6667,0.271
+Kaleb Johnson,RB,Steelers,22.5,,,,,,185,139,181,168.3333,0.147
+Devin Neal,RB,Saints,22.5,,,,,,183,219,202,201.3333,0.0873
+Elijah Arroyo,TE,Seahawks,22.9,,,,,,,183,247,215.0,0.2057
+Ollie Gordon,RB,Dolphins,22.1,,,,,,180,221,224,208.3333,0.1152
+Marvin Mims,WR,Broncos,,,,,,,,182,,182.0,
+Keon Coleman,WR,Bills,22.8,,,,,,182,123,183,162.6667,0.2049
+Tre Tucker,WR,Raiders,25.0,,,,,,192,179,242,204.3333,0.1589
+Tank Bigsby,RB,Eagles,23.5,,,,,,,187,219,203.0,0.1088
+Jack Bech,WR,Raiders,23.2,,,,,,194,176,216,195.3333,0.1
 Jalen Milroe,QB,Seahawks,23.2,,,,,,,178,243,210.5,0.2133
-Gunnar Helm,TE,Titans,23.5,,,,186,243,,224,205,214.5,0.1117
-Eli Stowers,TE,Rookie,,,,,103,129,,,106,112.6667,0.1209
-Jaylen Wright,RB,Dolphins,,,,,,235,,170,,202.5,0.2215
-Brian Robinson,RB,49ers,26.9,,,,,213,,153,235,200.3333,0.2067
-Cade Otton,TE,Buccaneers,26.9,,,,,204,,211,230,215.0,0.0612
+Gunnar Helm,TE,Titans,23.5,,,,186,192,,224,205,201.75,0.0814
+Eli Stowers,TE,Rookie,,,,,103,95,,,106,101.3333,0.0535
+Jaylen Wright,RB,Dolphins,,,,,,,,170,,170.0,
+Brian Robinson,RB,49ers,26.9,,,,,,,153,235,194.0,0.2914
+Cade Otton,TE,Buccaneers,26.9,,,,,199,,211,230,213.3333,0.0716
 Trinidad Chambliss,QB,Rookie,,,,,,,,,,228.0,
-Tez Johnson,WR,Buccaneers,,,,,,233,,235,,234.0,0.0059
-Tyreek Hill,WR,Free Agent,32.0,,,,,162,179,116,170,156.75,0.1734
-Michael Mayer,TE,Raiders,,,,,,221,,233,,227.0,0.0366
+Tez Johnson,WR,Buccaneers,,,,,,,,235,,235.0,
+Tyreek Hill,WR,Free Agent,32.0,,,,,,179,116,170,155.0,0.213
+Michael Mayer,TE,Raiders,,,,,,,,233,,233.0,
 Jake Tonges,TE,49ers,26.6,,,,,,,,226,226.0,
-Dalton Schultz,TE,Texans,29.6,,,,,177,,212,223,204.0,0.1149
+Dalton Schultz,TE,Texans,29.6,,,,,191,,212,223,208.6667,0.0761
 Isaiah Bond,WR,Browns,21.9,,,,,,,236,225,230.5,0.033
 Kendre Miller,RB,Saints,,,,,,,,201,,201.0,
-Malachi Fields,WR,Rookie,,,,,184,203,158,,166,177.75,0.1097
+Malachi Fields,WR,Rookie,,,,,184,171,158,,166,169.75,0.0624
 Quinn Ewers,QB,Dolphins,,,,,,,,,,240.0,
-Brashard Smith,RB,Chiefs,,,,,,245,,226,,235.5,0.0559
-Demario Douglas,WR,Patriots,,,,,,223,,196,,209.5,0.089
-Chigoziem Okonkwo,TE,Titans,,,,,180,211,,186,,192.3333,0.0833
-Dontayvion Wicks,WR,Packers,,,,,,219,,189,,204.0,0.1015
-Xavier Legette,WR,Panthers,,,,,,226,,188,,207.0,0.1267
+Brashard Smith,RB,Chiefs,,,,,,,,226,,226.0,
+Demario Douglas,WR,Patriots,,,,,,,,196,,196.0,
+Chigoziem Okonkwo,TE,Titans,,,,,180,148,,186,,171.3333,0.1159
+Dontayvion Wicks,WR,Packers,,,,,,,,189,,189.0,
+Xavier Legette,WR,Panthers,,,,,,,,188,,188.0,
 Colby Parkinson,TE,Rams,27.1,,,,,,,,248,248.0,
-Darnell Mooney,WR,Falcons,,,,,,184,196,172,,184.0,0.0635
-Travis Kelce,TE,Chiefs,36.4,,,,,188,,110,206,168.0,0.295
-Max Klare,TE,Free Agent,,,,,,194,,,179,186.5,0.0554
-Rashod Bateman,WR,Ravens,,,,,,198,,194,,196.0,0.0141
-Cedric Tillman,WR,Browns,,,,,,206,198,202,,202.0,0.0193
-Calvin Ridley,WR,Titans,,,,,,208,,129,,168.5,0.322
-Isiah Pacheco,RB,Chiefs,27.0,,,,,209,175,125,249,189.5,0.2703
-Pat Freiermuth,TE,Steelers,27.3,,,,,214,,195,239,216.0,0.0999
-James Conner,RB,Cardinals,30.8,,,,,215,,169,233,205.6667,0.1567
-Antonio Williams,WR,Free Agent,,,,,154,217,171,,182,181.0,0.1431
-Christian Kirk,WR,Texans,,,,,,222,,173,,197.5,0.1711
-Cooper Kupp,WR,Seahawks,,,,,,224,,137,,180.5,0.3316
-Ray Davis,RB,Bills,,,,,,228,,180,,204.0,0.1624
-Evan Engram,TE,Broncos,,,,,,232,,154,,193.0,0.2786
-Keenan Allen,WR,Chargers,,,,,,236,200,213,,216.3333,0.0824
-Malik Washington,WR,Dolphins,,,,,,237,,,,237.0,
-Marquise Brown,WR,Chiefs,,,,,,239,193,191,,207.6667,0.1277
-Ben Sinnott,TE,Commanders,,,,,,240,,229,,234.5,0.0325
-Darius Slayton,WR,Giants,,,,,,241,,,,241.0,
-Michael Trigg,TE,Free Agent,,,,,,242,,,,242.0,
-Najee Harris,RB,Chargers,28.0,,,,,246,,231,245,240.6667,0.0341
-Skyler Bell,WR,Free Agent,,,,,,247,,,,247.0,
-Devaughn Vele,WR,Saints,,,,,,249,,,,249.0,
-Jaydon Blue,RB,Cowboys,22.1,,,,,250,,215,244,236.3333,0.0776
+Darnell Mooney,WR,Falcons,,,,,,,196,172,,184.0,0.0898
+Travis Kelce,TE,Chiefs,36.4,,,,,167,,110,206,161.0,0.2908
+Max Klare,TE,Free Agent,,,,,,175,,,179,177.0,0.0155
+Rashod Bateman,WR,Ravens,,,,,,,,194,,194.0,
+Cedric Tillman,WR,Browns,,,,,,,198,202,,200.0,0.0138
+Calvin Ridley,WR,Titans,,,,,,,,129,,129.0,
+Isiah Pacheco,RB,Chiefs,27.0,,,,,197,175,125,249,186.5,0.2685
+Pat Freiermuth,TE,Steelers,27.3,,,,,,,195,239,217.0,0.1401
+James Conner,RB,Cardinals,30.8,,,,,,,169,233,201.0,0.2197
+Antonio Williams,WR,Free Agent,,,,,154,136,171,,182,160.75,0.1214
+Christian Kirk,WR,Texans,,,,,,,,173,,173.0,
+Cooper Kupp,WR,Seahawks,,,,,,,,137,,137.0,
+Ray Davis,RB,Bills,,,,,,,,180,,180.0,
+Evan Engram,TE,Broncos,,,,,,,,154,,154.0,
+Keenan Allen,WR,Chargers,,,,,,,200,213,,206.5,0.0435
+Malik Washington,WR,Dolphins,,,,,,,,,,237.0,
+Marquise Brown,WR,Chiefs,,,,,,,193,191,,192.0,0.0072
+Ben Sinnott,TE,Commanders,,,,,,,,229,,229.0,
+Darius Slayton,WR,Giants,,,,,,,,,,241.0,
+Michael Trigg,TE,Free Agent,,,,,,,,,,242.0,
+Najee Harris,RB,Chargers,28.0,,,,,,,231,245,238.0,0.0407
+Skyler Bell,WR,Free Agent,,,,,,179,,,,179.0,
+Devaughn Vele,WR,Saints,,,,,,,,,,249.0,
+Jaydon Blue,RB,Cowboys,22.1,,,,,,,215,244,229.5,0.0874
 Deion Burks,WR,Rookie,,,,,,,168,,214,191.0,0.166
 Bryce Lance,WR,Rookie,,,,,,,174,,,174.0,
 Dont'e Thornton Jr.,WR,Raiders,,,,,,,189,,,189.0,
@@ -297,7 +297,7 @@ Jarquez Hunter,RB,Rams,,,,,,,,249,,249.0,
 Trevor Etienne,RB,Panthers,,,,,,,,250,,250.0,
 Carson Beck,QB,,,,,,,,,,188,188.0,
 Eric McAlister,WR,,,,,,,,,,203,203.0,
-Ted Hurst,WR,,,,,,,,,,204,204.0,
+Ted Hurst,WR,,,,,,,162,,,204,183.0,0.158
 Brenen Thompson,WR,,,,,,,,,,207,207.0,
 Le'Veon Moss,RB,,,,,,,,,,209,209.0,
 Jack Endries,TE,,,,,,,,,,210,210.0,
@@ -305,10 +305,11 @@ CJ Daniels,WR,,,,,,,,,,215,215.0,
 J'Mari Taylor,RB,,,,,,,,,,217,217.0,
 Taylen Green,QB,,,,,,,,,,221,221.0,
 CJ Donaldson,RB,,,,,,,,,,222,222.0,
-Oscar Delp,TE,,,,,,,,,,228,228.0,
+Oscar Delp,TE,,,,,,,176,,,228,202.0,0.1776
 Drew Allar,QB,,,,,,,,,,231,231.0,
 Noah Thomas,WR,,,,,,,,,,236,236.0,
 Marlin Klein,TE,,,,,,,,,,237,237.0,
 Dane Key,WR,,,,,,,,,,238,238.0,
 Josh Cameron,WR,,,,,,,,,,240,240.0,
 Cade Klubnik,QB,,,,,,,,,,250,250.0,
+De'Zhaun Stribling,,,,,,,,157,,,,157.0,
