@@ -49,18 +49,18 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 ## Source Columns Per Sport
 
 **Baseball** (7 sources, 681 players, 479 with multi-source averages):
-- `FantraxHQ_Roto (Wes Hughes, Feb 2026)` — 400 players
-- `HarryKnowsBall (Crowdsourced, May 2026)` — 393 players
+- `Fantrax (Wes Hughes, Feb 2026)` — 400 players
+- `Harry Knows Ball (Crowdsourced, May 2026)` — 393 players
 - `The Athletic (Chris Welsh, Feb 2026)` — 400 players
-- `RotoWorld (Eric Cross, May 2026)` — 200 players
-- `FantasyPros (FantasyPros, Mar 2026)` — 300 players
+- `Roto Baller (Eric Cross, May 2026)` — 200 players
+- `Fantasy Pros (FantasyPros, Mar 2026)` — 300 players
 - `Baseball America (May 2026)` — 393 players (400-entry list with 7 draft pick slots skipped)
 - `Owen FBB Invitational (Startup, Feb 2026)` — 499 players (overall pick number as rank)
 
 **Football** (6 sources, 317 players, 238 with multi-source averages):
 - `PFF (Nathan Jahnke, Feb 2026)` — 200 players
 - `KeepTradeCut (Crowdsourced, May 2026)` — 181 players (200-slot list with 19 draft pick slots skipped)
-- `FantasyPros (FantasyPros, May 2026)` — 200 players
+- `Fantasy Pros (FantasyPros, May 2026)` — 200 players
 - `DraftSharks (DraftSharks, May 2026)` — 200 players
 - `Dynasty League Football (Crowdsourced, Feb 2026)` — 250 players
 - `Dynatyze (Crowdsourced, May 2026)` — 199 players
