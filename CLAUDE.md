@@ -72,22 +72,26 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Hashtag Basketball (Pts, Feb 2026)` — points leagues, 250 players (by Joseph Mamone)
 - `RoundBallRhettoric (Pts, Mar 2026)` — points leagues, 228 players
 
-**Hockey Skaters** (4 sources, 513 players, 379 with multi-source averages):
+**Hockey Skaters** (6 sources, 518 players, 389 with multi-source averages):
 - `Dobber (Aug 2026)` — 300 players
 - `Hashtag Hockey (Mar 2026)` — 199 players (skaters only)
 - `Lineup Experts (Aug 2026)` — 465 skaters from combined 501-player list; re-ranked sequentially 1–465
 - `ErockThud (Mar 2026)` — 333 skaters from combined list (also includes goalies + draft picks); re-ranked sequentially 1–333
+- `Haxboy (Mar 2026)` — 193 players
+- `Dynasty Puck (Aug 2026)` — 244 skaters from combined 300-player list; re-ranked sequentially 1–244
 
-**Hockey Goalies** (5 sources, 74 goalies, 49 with multi-source averages):
+**Hockey Goalies** (7 sources, 76 goalies, 56 with multi-source averages):
 - `Dobber (Aug 2026)` — 60 goalies
 - `Hashtag Hockey (Mar 2026)` — 50 goalies
 - `Lineup Experts (Aug 2026)` — 36 goalies; re-ranked sequentially 1–36
 - `ErockThud (Mar 2026)` — 34 goalies; re-ranked sequentially 1–34
 - `RankKing (Mar 2026)` — 40 goalies (added from mobile app screenshots)
+- `Haxboy (Mar 2026)` — 26 goalies
+- `Dynasty Puck (Aug 2026)` — 56 goalies from combined 300-player list; re-ranked sequentially 1–56
 
-For combined hockey sources (Lineup Experts, ErockThud): skaters and goalies are split into their respective master files and each group is re-ranked sequentially 1–N by their order of appearance in the original combined list.
+For combined hockey sources (Lineup Experts, ErockThud, Dynasty Puck): skaters and goalies are split into their respective master files and each group is re-ranked sequentially 1–N by their order of appearance in the original combined list.
 
-Hockey merge scripts: `create_dobber_hockey_skaters.py`, `create_dobber_hockey_goalies.py`, `update_dobber_hockey_skaters.py`, `update_dobber_hockey_goalies.py`, `merge_hashtag_hockey_skaters.py`, `merge_hashtag_hockey_goalies.py`, `merge_lineup_experts_hockey_skaters.py`, `merge_lineup_experts_hockey_goalies.py`, `merge_erock_hockey.py`, `merge_rankking_hockey_goalies.py`
+Hockey merge scripts: `create_dobber_hockey_skaters.py`, `create_dobber_hockey_goalies.py`, `update_dobber_hockey_skaters.py`, `update_dobber_hockey_goalies.py`, `merge_hashtag_hockey_skaters.py`, `merge_hashtag_hockey_goalies.py`, `merge_lineup_experts_hockey_skaters.py`, `merge_lineup_experts_hockey_goalies.py`, `merge_erock_hockey.py`, `merge_rankking_hockey_goalies.py`, `merge_dynastypuck_hockey_skaters.py`, `merge_dynastypuck_hockey_goalies.py`
 
 ## Basketball-Specific Format
 Basketball source column headers include a league format indicator: `"Source (Format, Date)"` where Format is `Cat` (category), `Pts` (points), or `Unk` (unknown).
