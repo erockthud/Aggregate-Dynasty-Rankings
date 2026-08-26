@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Merge Lineup Experts (Oct 2025) goalie rankings into hockey_goalies_master.csv.
-Goalies are ranked 1-34 by their position among goalies only (not overall rank).
+Merge Lineup Experts (Aug 2026) goalie rankings into hockey_goalies_master.csv.
+Goalies are ranked 1-N by their position among goalies only (not overall rank).
 Run recalculate.py afterward.
 """
 
@@ -12,45 +12,47 @@ import subprocess
 import unicodedata
 
 MASTER_PATH = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "hockey", "hockey_goalies_master.csv"))
-SOURCE_COL = "Lineup Experts (Oct 2025)"
+OLD_SOURCE_COL = "Lineup Experts (Oct 2025)"
+SOURCE_COL = "Lineup Experts (Aug 2026)"
 
-# (goalie_rank, name)  — ranked 1-34 by order of appearance in Lineup Experts combined list
-# Original overall ranks (among all players): Oettinger=15, Hellebuyck=18, Vasilevskiy=35, etc.
+# (goalie_rank, name) — ranked 1-N by order of appearance in Lineup Experts combined list
 GOALIE_DATA = [
-    (1,  "Jake Oettinger"),
-    (2,  "Connor Hellebuyck"),
-    (3,  "Andrei Vasilevskiy"),
-    (4,  "Dustin Wolf"),
-    (5,  "Igor Shesterkin"),
-    (6,  "Filip Gustavsson"),
-    (7,  "Mackenzie Blackwood"),
-    (8,  "Jeremy Swayman"),
-    (9,  "Ilya Sorokin"),
-    (10, "Logan Thompson"),
-    (11, "Lukas Dostal"),
-    (12, "Linus Ullmark"),
-    (13, "Juuse Saros"),
-    (14, "Sergei Bobrovsky"),
-    (15, "Darcy Kuemper"),
-    (16, "Stuart Skinner"),
-    (17, "Sam Montembeault"),
-    (18, "Adin Hill"),
-    (19, "Anthony Stolarz"),
-    (20, "Spencer Knight"),
-    (21, "Jordan Binnington"),
-    (22, "Jacob Markstrom"),
-    (23, "Thatcher Demko"),
-    (24, "Yaroslav Askarov"),
-    (25, "Karel Vejmelka"),
-    (26, "Joey Daccord"),
-    (27, "Samuel Ersson"),
-    (28, "Frederik Andersen"),
-    (29, "Joseph Woll"),
-    (30, "Ukko-Pekka Luukkonen"),
-    (31, "Elvis Merzlikins"),
-    (32, "Pyotr Kochetkov"),
-    (33, "John Gibson"),
-    (34, "Jet Greaves"),
+    (1, "Andrei Vasilevskiy"),
+    (2, "Jake Oettinger"),
+    (3, "Jet Greaves"),
+    (4, "Logan Thompson"),
+    (5, "Igor Shesterkin"),
+    (6, "Karel Vejmelka"),
+    (7, "Connor Hellebuyck"),
+    (8, "Jeremy Swayman"),
+    (9, "Spencer Knight"),
+    (10, "Ilya Sorokin"),
+    (11, "Dustin Wolf"),
+    (12, "Lukas Dostal"),
+    (13, "Joel Hofer"),
+    (14, "Brandon Bussi"),
+    (15, "Juuse Saros"),
+    (16, "John Gibson"),
+    (17, "Joey Daccord"),
+    (18, "Carter Hart"),
+    (19, "Ukko-Pekka Luukkonen"),
+    (20, "Jesper Wallstedt"),
+    (21, "Scott Wedgewood"),
+    (22, "Daniel Vladar"),
+    (23, "Yaroslav Askarov"),
+    (24, "Linus Ullmark"),
+    (25, "Darcy Kuemper"),
+    (26, "Jake Allen"),
+    (27, "Jacob Markstrom"),
+    (28, "Sergei Bobrovsky"),
+    (29, "Anthony Stolarz"),
+    (30, "Mackenzie Blackwood"),
+    (31, "Tristan Jarry"),
+    (32, "Thatcher Demko"),
+    (33, "Filip Gustavsson"),
+    (34, "Jakub Dobes"),
+    (35, "Arturs Silovs"),
+    (36, "Pyotr Kochetkov"),
 ]
 
 
@@ -69,8 +71,17 @@ with open(MASTER_PATH, newline="") as f:
     fieldnames = list(reader.fieldnames)
     rows = list(reader)
 
-if SOURCE_COL not in fieldnames:
+if OLD_SOURCE_COL in fieldnames:
+    fieldnames = [SOURCE_COL if fn == OLD_SOURCE_COL else fn for fn in fieldnames]
+    for row in rows:
+        row[SOURCE_COL] = ""
+        if OLD_SOURCE_COL in row:
+            del row[OLD_SOURCE_COL]
+elif SOURCE_COL not in fieldnames:
     fieldnames.insert(fieldnames.index("Average Rank"), SOURCE_COL)
+    for row in rows:
+        row[SOURCE_COL] = ""
+else:
     for row in rows:
         row[SOURCE_COL] = ""
 
