@@ -65,8 +65,8 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Dynasty League Football (Crowdsourced, Feb 2026)` — 250 players
 - `Dynatyze (Crowdsourced, May 2026)` — 199 players
 
-**Basketball** (5 sources, 336 players, 281 with multi-source averages):
-- `Dizzle Dynasty (Pts, Apr 2026)` — points leagues, 250 players
+**Basketball** (5 sources, 360 players, 298 with multi-source averages):
+- `Dizzle Dynasty (Pts, Sep 2026)` — points leagues, 300 players
 - `Noah Rubin (Cat, Jan 2026)` — category leagues, 250 players
 - `Matt Lawson (Pts, Mar 2026)` — points leagues, 300 players
 - `Hashtag Basketball (Pts, Sep 2026)` — points leagues, 243 players (250-entry list with 7 draft pick slots skipped)
@@ -97,6 +97,10 @@ Hockey merge scripts: `create_dobber_hockey_skaters.py`, `create_dobber_hockey_g
 Basketball source column headers include a league format indicator: `"Source (Format, Date)"` where Format is `Cat` (category), `Pts` (points), or `Unk` (unknown).
 
 Basketball `Level` values: `NBA` for active/drafted pros, `College` for college prospects.
+
+Basketball `Age` values are stored as whole years (integer), not decimals.
+
+When a source provides multi-position strings (e.g. `PF/C`, `SG/SF/PF`) and/or team/age data, use it to backfill blank `Position`/`Team`/`Age` fields on existing rows (never overwrite already-populated values). Map the first listed position to the master's G/F/C convention (`PG`/`SG`→`G`, `SF`/`PF`→`F`, `C`→`C`). For a traded player shown as `OLD -> NEW`, use `NEW`; for `-> FA` (free agent), leave `Team` blank rather than inventing an "FA" team code.
 
 ## Adding a New Source
 1. Parse raw data into rank/player/pos/team
