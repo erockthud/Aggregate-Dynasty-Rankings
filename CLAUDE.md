@@ -65,11 +65,11 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Dynasty League Football (Crowdsourced, Feb 2026)` — 250 players
 - `Dynatyze (Crowdsourced, May 2026)` — 199 players
 
-**Basketball** (5 sources, 316 players, 273 with multi-source averages):
-- `Dizzle Dynasty (Cat, Mar 2026)` — category leagues, 213 players (may be truncated)
+**Basketball** (5 sources, 336 players, 281 with multi-source averages):
+- `Dizzle Dynasty (Pts, Apr 2026)` — points leagues, 250 players
 - `Noah Rubin (Cat, Jan 2026)` — category leagues, 250 players
 - `Matt Lawson (Pts, Mar 2026)` — points leagues, 300 players
-- `Hashtag Basketball (Pts, Feb 2026)` — points leagues, 250 players (by Joseph Mamone)
+- `Hashtag Basketball (Pts, Sep 2026)` — points leagues, 243 players (250-entry list with 7 draft pick slots skipped)
 - `RoundBallRhettoric (Pts, Mar 2026)` — points leagues, 228 players
 
 **Hockey Skaters** (6 sources, 518 players, 389 with multi-source averages):
