@@ -72,17 +72,15 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Hashtag Basketball (Pts, Sep 2026)` — points leagues, 243 players (250-entry list with 7 draft pick slots skipped)
 - `RoundBallRhettoric (Pts, Mar 2026)` — points leagues, 228 players
 
-**Hockey Skaters** (6 sources, 518 players, 388 with multi-source averages):
+**Hockey Skaters** (5 sources, 500 players, 384 with multi-source averages):
 - `Dobber (Aug 2026)` — 300 players
-- `Hashtag Hockey (Mar 2026)` — 199 players (skaters only)
 - `Lineup Experts (Aug 2026)` — 465 skaters from combined 501-player list; re-ranked sequentially 1–465
 - `ErockThud (Sep 2026)` — 336 skaters from combined list (also includes goalies + draft picks); re-ranked sequentially 1–336
 - `Haxboy (Mar 2026)` — 193 players
 - `Dynasty Puck (Aug 2026)` — 244 skaters from combined 300-player list; re-ranked sequentially 1–244
 
-**Hockey Goalies** (7 sources, 76 goalies, 56 with multi-source averages):
+**Hockey Goalies** (6 sources, 67 goalies, 52 with multi-source averages):
 - `Dobber (Aug 2026)` — 60 goalies
-- `Hashtag Hockey (Mar 2026)` — 50 goalies
 - `Lineup Experts (Aug 2026)` — 36 goalies; re-ranked sequentially 1–36
 - `ErockThud (Sep 2026)` — 35 goalies; re-ranked sequentially 1–35
 - `RankKing (Mar 2026)` — 40 goalies (added from mobile app screenshots)
@@ -176,6 +174,7 @@ The data is published as a static site at the repo's GitHub Pages URL. The entry
 - ErockThud source updated to Sep 2026 (now the newest hockey source); column renamed from `ErockThud (Mar 2026)` to `ErockThud (Sep 2026)` and values fully replaced (not merged) since it's a full re-ranked list each time. Script: `scripts/update_erock_hockey.py`.
 - ErockThud source had a typo: "Artyom Levhunov" → correct is "Artyom Levshunov"; handled in NAME_MAP.
 - RankKing source uses "Samuel Montembeault" → mapped to canonical "Sam Montembeault" via NAME_MAP in merge script.
+- Hashtag Hockey (Mar 2026) source removed (Sep 2026) as out of date. 27 players (18 skaters, 9 goalies) whose only ranking came from Hashtag Hockey were dropped entirely from the masters since they had zero remaining source coverage. `merge_hashtag_hockey_skaters.py`/`merge_hashtag_hockey_goalies.py` scripts kept for historical reference only — the source is no longer active.
 
 ## Miscellaneous Notes
 - `rankings.csv` was deleted (was a long-format duplicate, not needed).
