@@ -65,9 +65,9 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Dynasty League Football (Crowdsourced, Feb 2026)` — 250 players
 - `Dynatyze (Crowdsourced, May 2026)` — 199 players
 
-**Basketball** (5 sources, 360 players, 298 with multi-source averages):
+**Basketball** (5 sources, 355 players, 301 with multi-source averages):
 - `Dizzle Dynasty (Pts, Sep 2026)` — points leagues, 300 players
-- `Noah Rubin (Cat, Jan 2026)` — category leagues, 250 players
+- `Noah Rubin (Cat, Aug 2026)` — category leagues, 250 players
 - `Matt Lawson (Pts, Mar 2026)` — points leagues, 300 players
 - `Hashtag Basketball (Pts, Sep 2026)` — points leagues, 243 players (250-entry list with 7 draft pick slots skipped)
 - `RoundBallRhettoric (Pts, Mar 2026)` — points leagues, 228 players
@@ -99,6 +99,8 @@ Basketball `Level` values: `NBA` for active/drafted pros, `College` for college 
 Basketball `Age` values are stored as whole years (integer), not decimals.
 
 When a source provides multi-position strings (e.g. `PF/C`, `SG/SF/PF`) and/or team/age data, use it to backfill blank `Position`/`Team`/`Age` fields on existing rows (never overwrite already-populated values). Map the first listed position to the master's G/F/C convention (`PG`/`SG`→`G`, `SF`/`PF`→`F`, `C`→`C`). For a traded player shown as `OLD -> NEW`, use `NEW`; for `-> FA` (free agent), leave `Team` blank rather than inventing an "FA" team code.
+
+Noah Rubin source updated to Aug 2026; column renamed from `Noah Rubin (Cat, Jan 2026)` to `Noah Rubin (Cat, Aug 2026)` and values fully replaced (not merged), matching the ErockThud hockey update pattern. Script: `scripts/update_noah_rubin_aug2026.py`. 5 players (Tre Mann, Cody Williams, Moussa Cisse, Pat Spencer, Patrick Ngongba II) whose only ranking came from the old Noah Rubin list were dropped from the master since they had zero remaining source coverage.
 
 ## Adding a New Source
 1. Parse raw data into rank/player/pos/team
