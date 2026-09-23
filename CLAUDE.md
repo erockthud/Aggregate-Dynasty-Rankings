@@ -65,13 +65,12 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Dynasty League Football (Crowdsourced, Feb 2026)` — 250 players
 - `Dynatyze (Crowdsourced, May 2026)` — 199 players
 
-**Basketball** (6 sources, 355 players, 307 with multi-source averages):
+**Basketball** (5 sources, 355 players, 301 with multi-source averages):
 - `Dizzle Dynasty (Pts, Sep 2026)` — points leagues, 300 players
 - `Noah Rubin (Cat, Aug 2026)` — category leagues, 250 players
 - `Matt Lawson (Pts, Mar 2026)` — points leagues, 300 players
 - `Hashtag Basketball (Pts, Sep 2026)` — points leagues, 243 players (250-entry list with 7 draft pick slots skipped)
 - `RoundBallRhettoric (Pts, Mar 2026)` — points leagues, 228 players
-- `Zach Reifschneider (Cat, Aug 2026)` — category leagues, 250 players
 
 **Hockey Skaters** (5 sources, 500 players, 384 with multi-source averages):
 - `Dobber (Aug 2026)` — 300 players
@@ -103,7 +102,7 @@ When a source provides multi-position strings (e.g. `PF/C`, `SG/SF/PF`) and/or t
 
 Noah Rubin source updated to Aug 2026; column renamed from `Noah Rubin (Cat, Jan 2026)` to `Noah Rubin (Cat, Aug 2026)` and values fully replaced (not merged), matching the ErockThud hockey update pattern. Script: `scripts/update_noah_rubin_aug2026.py`. 5 players (Tre Mann, Cody Williams, Moussa Cisse, Pat Spencer, Patrick Ngongba II) whose only ranking came from the old Noah Rubin list were dropped from the master since they had zero remaining source coverage.
 
-Zach Reifschneider (Cat, Aug 2026) added as a new 6th basketball source (250 players, all matched existing master rows, no new players). Script: `scripts/merge_zach_reifschneider_basketball.py`.
+"Zach Reifschneider" was briefly added as a 6th basketball source but reverted — it's the same person/list as Dizzle Dynasty, already covered by that column, and was a mistaken duplicate entry.
 
 ## Adding a New Source
 1. Parse raw data into rank/player/pos/team
