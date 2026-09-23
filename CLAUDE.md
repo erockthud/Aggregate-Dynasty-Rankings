@@ -72,11 +72,11 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Hashtag Basketball (Pts, Sep 2026)` — points leagues, 243 players (250-entry list with 7 draft pick slots skipped)
 - `RoundBallRhettoric (Pts, Mar 2026)` — points leagues, 228 players
 
-**Hockey Skaters** (6 sources, 518 players, 389 with multi-source averages):
+**Hockey Skaters** (6 sources, 518 players, 388 with multi-source averages):
 - `Dobber (Aug 2026)` — 300 players
 - `Hashtag Hockey (Mar 2026)` — 199 players (skaters only)
 - `Lineup Experts (Aug 2026)` — 465 skaters from combined 501-player list; re-ranked sequentially 1–465
-- `ErockThud (Mar 2026)` — 333 skaters from combined list (also includes goalies + draft picks); re-ranked sequentially 1–333
+- `ErockThud (Sep 2026)` — 336 skaters from combined list (also includes goalies + draft picks); re-ranked sequentially 1–336
 - `Haxboy (Mar 2026)` — 193 players
 - `Dynasty Puck (Aug 2026)` — 244 skaters from combined 300-player list; re-ranked sequentially 1–244
 
@@ -84,14 +84,14 @@ python3 scripts/recalculate.py hockey/hockey_goalies_master.csv
 - `Dobber (Aug 2026)` — 60 goalies
 - `Hashtag Hockey (Mar 2026)` — 50 goalies
 - `Lineup Experts (Aug 2026)` — 36 goalies; re-ranked sequentially 1–36
-- `ErockThud (Mar 2026)` — 34 goalies; re-ranked sequentially 1–34
+- `ErockThud (Sep 2026)` — 35 goalies; re-ranked sequentially 1–35
 - `RankKing (Mar 2026)` — 40 goalies (added from mobile app screenshots)
 - `Haxboy (Mar 2026)` — 26 goalies
 - `Dynasty Puck (Aug 2026)` — 56 goalies from combined 300-player list; re-ranked sequentially 1–56
 
 For combined hockey sources (Lineup Experts, ErockThud, Dynasty Puck): skaters and goalies are split into their respective master files and each group is re-ranked sequentially 1–N by their order of appearance in the original combined list.
 
-Hockey merge scripts: `create_dobber_hockey_skaters.py`, `create_dobber_hockey_goalies.py`, `update_dobber_hockey_skaters.py`, `update_dobber_hockey_goalies.py`, `merge_hashtag_hockey_skaters.py`, `merge_hashtag_hockey_goalies.py`, `merge_lineup_experts_hockey_skaters.py`, `merge_lineup_experts_hockey_goalies.py`, `merge_erock_hockey.py`, `merge_rankking_hockey_goalies.py`, `merge_dynastypuck_hockey_skaters.py`, `merge_dynastypuck_hockey_goalies.py`
+Hockey merge scripts: `create_dobber_hockey_skaters.py`, `create_dobber_hockey_goalies.py`, `update_dobber_hockey_skaters.py`, `update_dobber_hockey_goalies.py`, `merge_hashtag_hockey_skaters.py`, `merge_hashtag_hockey_goalies.py`, `merge_lineup_experts_hockey_skaters.py`, `merge_lineup_experts_hockey_goalies.py`, `merge_erock_hockey.py`, `update_erock_hockey.py`, `merge_rankking_hockey_goalies.py`, `merge_dynastypuck_hockey_skaters.py`, `merge_dynastypuck_hockey_goalies.py`
 
 ## Basketball-Specific Format
 Basketball source column headers include a league format indicator: `"Source (Format, Date)"` where Format is `Cat` (category), `Pts` (points), or `Unk` (unknown).
@@ -173,6 +173,7 @@ The data is published as a static site at the repo's GitHub Pages URL. The entry
 ## Hockey-Specific Notes
 - Age column populated from a 500-player ranked list (ages as of Oct 2025); ~346 skaters and ~46 goalies have ages. Players not in that list remain blank. Script: `scripts/add_hockey_ages.py`.
 - Lineup Experts source updated to Aug 2026 (now the newest of the four skater/goalie sources).
+- ErockThud source updated to Sep 2026 (now the newest hockey source); column renamed from `ErockThud (Mar 2026)` to `ErockThud (Sep 2026)` and values fully replaced (not merged) since it's a full re-ranked list each time. Script: `scripts/update_erock_hockey.py`.
 - ErockThud source had a typo: "Artyom Levhunov" → correct is "Artyom Levshunov"; handled in NAME_MAP.
 - RankKing source uses "Samuel Montembeault" → mapped to canonical "Sam Montembeault" via NAME_MAP in merge script.
 
